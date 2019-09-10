@@ -1,0 +1,47 @@
+! Fonts Xft.hinting: true
+Xft.rgba: rgba
+Xft.antialias: true
+Xft.dpi: 96
+
+URxvt.scrollBar: false
+
+! Background-color
+URxvt*background: black
+
+! Font color
+URxvt*foreground: white
+
+URxvt*cursorBlink: true
+
+! do not scorll with
+URxvt*scrollTtyOutput: false
+
+! scroll in relation to buffer (with mouse scroller)
+URxvt*scrollWithBuffer: true
+
+! scroll back to the bottom on keypress
+URxvt*scrollTtyKeypress: true
+
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
+
+URxvt.colorUL: #468284
+
+URxvt.perl-ext-common: default,matcher,font-size
+
+URxvt*transparent: true
+URxvt*shading: 17
+
+URxvt.font: xft:Hack:pixelsize=9-wuncon-siji-medium-r-normal--10-100-75-75-c-80-iso10646-1
+URxvt.letterSpace: 0
+URxvt.linespace: 0
+
+URxvt.keysym.C-Up: perl:font-size:increase
+URxvt.keysym.C-Down: perl:font-size:decrease
+URxvt.keysym.C-S-Up: perl:font-size:incglobal
+URxvt.keysym.C-S-Down: perl:font-size:decglobal
+URxvt.keysym.C-equal: perl:font-size:reset
+URxvt.keysym.C-slash: perl:font-size:show
+
+rofi.combi-modi: window, drun, ssh
+rofi.font: hack 10

@@ -1,0 +1,28 @@
+#
+# These things are run when an Openbox X Session is started.
+# You may place a similar script in $HOME/.config/openbox/autostart
+# to run user-specific things.
+#
+
+# If you want to use GNOME config tools...
+#
+#if test -x /usr/lib/openbox/gnome-settings-daemon >/dev/null; then
+#  /usr/lib/openbox/gnome-settings-daemon &
+#elif which gnome-settings-daemon >/dev/null 2>&1; then
+#  gnome-settings-daemon &
+#fi
+
+# If you want to use XFCE config tools...
+#
+#xfce-mcs-manager &
+
+yakuake > /dev/null 2> /dev/null &
+#plank > /dev/null 2> /dev/null &
+#xcompmgr > /dev/null 2> /dev/null &
+compton > /dev/null 2> /dev/null &
+feh --bg-fill '/home/vparent/.wallpaper' > /dev/null 2> /dev/null &
+/home/vparent/.config/polybar/launch.sh openbox &
+conky -q -c /home/vparent/.config/conky/conky_right.conf > /dev/null 2> /dev/null &
+conky -q -c /home/vparent/.config/conky/conky_center.conf > /dev/null 2> /dev/null &
+#conky -q -c /home/vparent/.config/conky/conky_left.conf > /dev/null 2> /dev/null &
+#/home/vparent/.local/bin/battery_watcher &
