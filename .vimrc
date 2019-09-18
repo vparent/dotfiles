@@ -210,36 +210,38 @@ call plug#begin('~/.vim/plugged')
     if has('nvim')
         Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugin' }
         Plug 'rbgrouleff/bclose.vim'
-    else
-        Plug 'Shougo/deoplete.nvim'
-        Plug 'roxma/nvim-yarp'
-        Plug 'roxma/vim-hug-neovim-rpc'
-        Plug 'deoplete-plugins/deoplete-jedi'
-        Plug 'ryanoasis/vim-devicons'
-        Plug 'scrooloose/nerdtree'
-        Plug 'Xuyuanp/nerdtree-git-plugin'
-        Plug 'Shougo/deoplete-clangx'
-        Plug 'ternjs/tern_for_vim', {'do': 'npm install' }
-        Plug 'prabirshrestha/async.vim'
-        Plug 'prabirshrestha/vim-lsp'
-
-        Plug 'lighttiger2505/deoplete-vim-lsp'
-
-        Plug 'xavierd/clang_complete'
-
-        Plug 'francoiscabrol/ranger.vim'
-
-        Plug 'CaffeineViking/vim-glsl'
     endif
+    Plug 'Shougo/deoplete.nvim'
+    Plug 'roxma/nvim-yarp'
+    Plug 'roxma/vim-hug-neovim-rpc'
+    Plug 'deoplete-plugins/deoplete-jedi'
+    Plug 'ryanoasis/vim-devicons'
+    Plug 'scrooloose/nerdtree'
+    Plug 'Xuyuanp/nerdtree-git-plugin'
+    Plug 'Shougo/deoplete-clangx'
+    Plug 'ternjs/tern_for_vim', {'do': 'npm install' }
+    Plug 'prabirshrestha/async.vim'
+    Plug 'prabirshrestha/vim-lsp'
+
+    Plug 'lighttiger2505/deoplete-vim-lsp'
+
+    Plug 'xavierd/clang_complete'
+
+    Plug 'francoiscabrol/ranger.vim'
+
+    Plug 'CaffeineViking/vim-glsl'
+
+    Plug 'SirVer/ultisnips'
+    Plug 'honza/vim-snippets'
 call plug#end()
 
 let g:deoplete#enable_at_startup = 1
 " let g:deoplete#disable_auto_complete=1
-" call deoplete#custom#option({
-" \ 'autocomplete': v:true,
-" \ 'auto_complete_delay': 0,
-" \ 'smartcase': v:true,
-" \ })
+call deoplete#custom#option({
+\ 'autocomplete': v:true,
+\ 'auto_complete_delay': 5,
+\ 'smartcase': v:true,
+\ })
 
 if (executable('pyls'))
     let s:pyls_path = fnamemodify('python', ':h') . '/' . 'pyls'
@@ -260,13 +262,6 @@ if executable('clangb')
                 \ 'workspace_config': {'pyls': {'plugins': {'pydocstyle': {'enabled': v:true}}}}
                 \ })
 endif
-"if executable('lua-lsp')
-"    au User lsp_setup call lsp#register_server({
-"                \ 'name': 'lua-lsp',
-"                \ 'cmd': {server_info->[&shell, &shellcmdflag, 'lua-lsp']},
-"                \ 'whitelist': ['lua'],
-"                \ })
-"endif
 
 let g:clang_library_path='/usr/lib/libclang.so.8'
 
