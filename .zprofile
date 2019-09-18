@@ -6,5 +6,5 @@ if [ -d /opt/dotnet ];
 then
     export DOTNET_ROOT=/opt/dotnet;
     export DOTNET_CLI_TELEMETRY_OPTOUT=1
-    export MSBuildSDKsPath="/opt/dotnet/sdk/2.2.108/Sdks/";
+    export MSBuildSDKsPath="/opt/dotnet/sdk/3.0.100-preview9-014004/Sdks/";
 fi

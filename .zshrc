@@ -26,7 +26,7 @@ bindkey -v
 # End of lines configured by zsh-newuser-install
 zstyle :compinstall filename '/home/vparent/.zshrc'
 
-export EDITOR='vim'
+export EDITOR='nvim'
 export PATH=$PATH:$HOME/.local/bin:.:/usr/lib/mono/fsharp/:$HOME/.gem/ruby/2.6.0/bin
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
@@ -89,6 +89,8 @@ alias cgdb='cgdb -q'
 alias dbg='cgdb -q'
 
 alias chmod='chmod --preserve-root'
+
+alias te='$EDITOR'
 
 # Python aliases
 alias python="python -B"
