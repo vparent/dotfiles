@@ -233,6 +233,8 @@ call plug#begin('~/.vim/plugged')
 
     Plug 'SirVer/ultisnips'
     Plug 'honza/vim-snippets'
+
+    Plug 'tpope/vim-surround'
 call plug#end()
 
 let g:deoplete#enable_at_startup = 1
