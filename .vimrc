@@ -246,10 +246,6 @@ let g:deoplete#num_processes = 2
 let g:deoplete#on_insert_enter = 0
 let g:deoplete#on_text_changed_i = 0
 call deoplete#custom#option('smart_case', v:true)
-inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
-function! s:my_cr_function() abort
-    return deoplete#close_popup() . "\<CR>"
-endfunction
 
 if (executable('pyls'))
     let s:pyls_path = fnamemodify('python', ':h') . '/' . 'pyls'
