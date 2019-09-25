@@ -35,6 +35,7 @@ if has('nvim')
 else
         " Vim specific commands
         set guiheadroom=0
+        set ttymouse=xterm2
 endif
 
 
@@ -50,7 +51,7 @@ set splitright
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor = "latex"
 
-set omnifunc=ale#completion#OmniFunc
+"set omnifunc=ale#completion#OmniFunc
 
 set backspace=indent,eol,start
 set ruler
@@ -210,10 +211,11 @@ call plug#begin('~/.vim/plugged')
     if has('nvim')
         Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugin' }
         Plug 'rbgrouleff/bclose.vim'
+    else
+        Plug 'roxma/nvim-yarp'
+        Plug 'roxma/vim-hug-neovim-rpc'
     endif
     Plug 'Shougo/deoplete.nvim'
-    Plug 'roxma/nvim-yarp'
-    Plug 'roxma/vim-hug-neovim-rpc'
     Plug 'deoplete-plugins/deoplete-jedi'
     Plug 'ryanoasis/vim-devicons'
     Plug 'scrooloose/nerdtree'
@@ -239,11 +241,15 @@ call plug#end()
 
 let g:deoplete#enable_at_startup = 1
 " let g:deoplete#disable_auto_complete=1
-call deoplete#custom#option({
-\ 'autocomplete': v:true,
-\ 'auto_complete_delay': 5,
-\ 'smartcase': v:true,
-\ })
+"let g:deoplete#auto_complete_delay = 100
+let g:deoplete#num_processes = 2
+let g:deoplete#on_insert_enter = 0
+let g:deoplete#on_text_changed_i = 0
+call deoplete#custom#option('smart_case', v:true)
+inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+function! s:my_cr_function() abort
+    return deoplete#close_popup() . "\<CR>"
+endfunction
 
 if (executable('pyls'))
     let s:pyls_path = fnamemodify('python', ':h') . '/' . 'pyls'
