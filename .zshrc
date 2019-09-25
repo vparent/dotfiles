@@ -113,8 +113,6 @@ alias ~='cd ~/'
 
 alias d='dirs -v'
 
-#. /usr/share/powerline/bindings/zsh/powerline.zsh;
-
 if $(check_dskt_env i3) || $(check_dskt_env KDE); then
     #. /usr/share/powerline/bindings/zsh/powerline.zsh;
     /usr/bin/neofetch
@@ -125,6 +123,7 @@ if $(check_dskt_env i3) || $(check_dskt_env KDE); then
     fi
 fi
 
+# man colors
 man() {
     env LESS_TERMCAP_mb=$'\E[01;31m' \
     LESS_TERMCAP_md=$'\E[01;38;5;74m' \
@@ -152,16 +151,14 @@ else
 		IP_ADDR=$(ifconfig wlo1 | grep 'inet ' | awk '{ printf $2 }');
 	fi
 fi
+GIT_BRCH=$(if [ -d .git ]; then echo -n '\ue725 '; echo $(/usr/bin/git rev-parse --abbrev-ref HEAD); else echo ""; fi;)
 
-#GIT_BRCH="$(if [ -d .git ]; then echo '\ue725 $(/usr/bin/git rev-parse --abbrev-ref HEAD)'; else echo ""; fi;)"
-
+# Update each TMOUT seconds the prompt
 TRAPALRM() {
     CPU_USAGE=$(cat /proc/stat | grep 'cpu' | awk '{usage=($2+$4)*100/($2+$4+$5)} END {printf "%3d%s", usage, "%%" }')
     RAM_USAGE=$(free | grep Mem | awk '{printf "%3d%s", $3/$2 * 100.0, "%%"}')
-    #GIT_BRCH="$(if [ -d .git ]; then echo '\ue725 $(/usr/bin/git rev-parse --abbrev-ref HEAD)'; else echo ""; fi;);"
+    GIT_BRCH=$(if [ -d .git ]; then echo -n '\ue725 '; echo $(/usr/bin/git rev-parse --abbrev-ref HEAD); else echo ""; fi;)
     zle reset-prompt
 }
 
-
-#PS1="%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m:%{$reset_color%}`pwd` %{$fg[yellow]%}%~>%{$reset_color%}%  "
 PS1=$'\xe2\x95\xad\xe2\x94\x80\\ %F{red}\uf133 %D{%a %f %b%p} \uf64f %D{%H:%M:%S%p}%f %K \uf2c0 %F{blue}%n%f @ %F{magenta}'$IP_ADDR$'%f \uf07b :%F{green}%~%f ?:%F{red}%?%f jobs:%F{blue}%j%k%f \uf085 %F{red}'$CPU_USAGE$'%f \uf2db %F{blue}'$RAM_USAGE$'%f '$GIT_BRCH$'\n\xe2\x95\xb0\xe2\x94\x80> '
