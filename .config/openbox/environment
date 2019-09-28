@@ -10,4 +10,5 @@
 # http://www.google.com/search?q=how+to+set+keyboard+layout+xorg
 
 LANG=fr_FR.UTF-8
+LANGUAGE=fr
 QT_QPA_PLATFORMTHEME=qt5ct

@@ -242,7 +242,7 @@ call plug#end()
 let g:deoplete#enable_at_startup = 1
 " let g:deoplete#disable_auto_complete=1
 "let g:deoplete#auto_complete_delay = 100
-let g:deoplete#num_processes = 2
+let g:deoplete#num_processes = 6
 let g:deoplete#on_insert_enter = 0
 let g:deoplete#on_text_changed_i = 0
 call deoplete#custom#option('smart_case', v:true)

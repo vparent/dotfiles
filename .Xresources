@@ -3,7 +3,7 @@ Xft.rgba: rgba
 Xft.antialias: true
 Xft.dpi: 96
 
-URxvt.scrollBar: false
+URxvt*scrollBar: false
 
 ! Background-color
 URxvt*background: black
@@ -23,16 +23,20 @@ URxvt*scrollWithBuffer: true
 URxvt*scrollTtyKeypress: true
 
 URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.url-select.underline: true
 URxvt.matcher.button: 1
 
 URxvt.colorUL: #468284
 
-URxvt.perl-ext-common: default,matcher,font-size
+URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select,matcher,font-size
 
-URxvt*transparent: true
-URxvt*shading: 17
+URxvt*transparent: false
+URxvt*shading: 0
 
-URxvt.font: xft:Hack:pixelsize=9-wuncon-siji-medium-r-normal--10-100-75-75-c-80-iso10646-1
+! URxvt*font: xft:Hack:pixelsize=11-wuncon-siji-medium-r-normal--10-100-75-75-c-80-iso10646-1
+URxvt*font: xft:Fura Code Nerd Font:pixelsize=11
+! URxvt.font: xft:Bitstream Vera Sans Mono:pixelsize=11:antialias=true:hinting=true
+! URxvt.font: xft:terminus:pixelsize=11:antialias=true:hinting=true
 URxvt.letterSpace: 0
 URxvt.linespace: 0
 
@@ -42,6 +46,9 @@ URxvt.keysym.C-S-Up: perl:font-size:incglobal
 URxvt.keysym.C-S-Down: perl:font-size:decglobal
 URxvt.keysym.C-equal: perl:font-size:reset
 URxvt.keysym.C-slash: perl:font-size:show
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+URxvt.keysym.M-s: perl:keyboard-select:search
 
-rofi.combi-modi: window, drun, ssh
-rofi.font: hack 10
+rofi.combi-modi: window,ssh,drun
+rofi.font: hack 9

@@ -57,8 +57,6 @@ bindkey '\e[B' down-line-or-beginning-search
 
 bindkey '^[[3~' delete-char
 
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 # Aliases
 
 alias ls='ls --color=auto --group-directories-first'
@@ -143,7 +141,6 @@ zmodload zsh/nearcolor
 autoload -U colors && colors
 autoload -Uz vcs_info
 
-
 #TMOUT=1
 #CPU_USAGE=$(cat /proc/stat | grep 'cpu' | awk '{usage=($2+$4)*100/($2+$4+$5)} END {printf "%3d%s", usage, "%%" }')
 #RAM_USAGE=$(free | grep Mem | awk '{printf "%3d%s", $3/$2 * 100.0, "%%"}')
@@ -166,11 +163,12 @@ autoload -Uz vcs_info
 #
 #PS2=$'\xe2\x95\xad\xe2\x94\x80\\ %F{red}\uf133 %D{%a %f %b%p} \uf64f %D{%H:%M:%S%p}%f %K \uf2c0 %F{blue}%n%f @ %F{magenta}'$IP_ADDR$'%f \uf07b :%F{green}%~%f ?:%F{red}%?%f jobs:%F{blue}%j%k%f \uf085 %F{red}'$CPU_USAGE$'%f \uf2db %F{blue}'$RAM_USAGE$'%f '$GIT_BRCH$'\n\xe2\x95\xb0\xe2\x94\x80> '
 
-precmd() {
-    vcs_info
-}
-
-PROMPT='%F{green}[%*]%f %F{blue}%n%f %1~ %(!.#.>) '
-RPROMPT='%i'
+precmd_vcs_info() { vcs_info }
+precmd_functions+=( precmd_vcs_info )
+setopt prompt_subst
+PROMPT='%F{green}[%*]%f %F{blue}%n%f %~ %F{000}%B%(!.#.>)%b%f '
+#RPROMPT='%? $vcs_info_msg_0_'
+RPROMPT=$'%? $vcs_info_msg_0_'
+PS1=$PROMPT
 zstyle ':vcs_info:git:*' formats '%F{240}(%b)%r%f'
 zstyle ':vcs_info:*' enable git

@@ -16,6 +16,7 @@
 #
 #xfce-mcs-manager &
 
+$HOME/bin/xrandr_layout.sh
 yakuake > /dev/null 2> /dev/null &
 #plank > /dev/null 2> /dev/null &
 #xcompmgr > /dev/null 2> /dev/null &
@@ -25,4 +26,4 @@ feh --bg-fill '/home/vparent/.wallpaper' > /dev/null 2> /dev/null &
 conky -q -c /home/vparent/.config/conky/conky_right.conf > /dev/null 2> /dev/null &
 conky -q -c /home/vparent/.config/conky/conky_center.conf > /dev/null 2> /dev/null &
 #conky -q -c /home/vparent/.config/conky/conky_left.conf > /dev/null 2> /dev/null &
-#/home/vparent/.local/bin/battery_watcher &
+#$HOME/.local/bin/battery_watcher &

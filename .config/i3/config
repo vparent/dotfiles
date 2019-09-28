@@ -341,11 +341,12 @@ bindsym $mod+Shift+x exec xrdb -merge .Xresources
 #########################
 
 exec_always --no-startup-id export QT_QPA_PLATFORMTHEME="qt5ct"
-#exec_always --no-startup-id wal -i ~/.wallpaper > /dev/null 2> /dev/null;
-exec_always --no-startup-id wal -Rent >/dev/null 2>/dev/null;
+exec_always --no-startup_id xrdb -quiet ~/.Xresources > /dev/null 2> /dev/null;
+exec_always --no-startup-id wal -i ~/.wallpaper > /dev/null 2> /dev/null;
+#exec_always --no-startup-id wal -Rent >/dev/null 2>/dev/null;
+exec_always --no-startup_id wal -i ~/.wallpaper > /dev/null 2> /dev/null;
 exec_always --no-startup-id /usr/bin/compton
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh i3
 exec_always --no-startup-id feh --bg-scale ~/.wallpaper
 exec_always --no-startup-id setxkbmap fr
 exec_always --no-startup-id xrandr --output HDMI-A-0 --mode 1920x1080
-exec_always --no-startup-id tilda
