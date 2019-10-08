@@ -166,7 +166,7 @@ autoload -Uz vcs_info
 precmd_vcs_info() { vcs_info }
 precmd_functions+=( precmd_vcs_info )
 setopt prompt_subst
-PROMPT='%F{green}[%*]%f %F{blue}%n%f %~ %F{000}%B%(!.#.>)%b%f '
+PROMPT='%F{green}[%*]%f %F{blue}%n%f@%m %~ %F{000}%B%(!.#.>)%b%f '
 #RPROMPT='%? $vcs_info_msg_0_'
 RPROMPT=$'%? $vcs_info_msg_0_'
 PS1=$PROMPT
