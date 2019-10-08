@@ -113,13 +113,16 @@ alias ~='cd ~/'
 
 alias d='dirs -v'
 
-if $(check_dskt_env i3) || $(check_dskt_env KDE); then
-    #. /usr/share/powerline/bindings/zsh/powerline.zsh;
-    /usr/bin/neofetch
-    if $(check_dskt_env i3); then
-        export QT_QPA_PLATFORMTHEME="qt5ct"
-        xrdb ~/.Xresources
-        #wal -Rent > /dev/null 2> /dev/null;
+if [ -f $HOME/bin/check_dskt_env ]
+then
+    if $(check_dskt_env i3) || $(check_dskt_env KDE); then
+        #. /usr/share/powerline/bindings/zsh/powerline.zsh;
+        /usr/bin/neofetch
+        if $(check_dskt_env i3); then
+            export QT_QPA_PLATFORMTHEME="qt5ct"
+            xrdb ~/.Xresources
+            #wal -Rent > /dev/null 2> /dev/null;
+        fi
     fi
 fi
 
