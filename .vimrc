@@ -267,7 +267,7 @@ if executable('clangb')
                 \ })
 endif
 
-let g:clang_library_path='/usr/lib/libclang.so.8'
+let g:clang_library_path='/usr/lib/libclang.so'
 
 map <Leader>f :Ranger<CR>
 
