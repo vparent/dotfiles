@@ -451,12 +451,12 @@ label-separator-foreground = ${colors.foreground-alt}
 menu-0-0 = reboot
 menu-0-0-exec = menu-open-1
 menu-0-1 = power off
-menu-0-1-exec = menu-open-2
+menu-0-1-exec = /usr/bin/shutdown -h now
 
 menu-1-0 = cancel
 menu-1-0-exec = menu-open-0
 menu-1-1 = reboot
-menu-1-1-exec = sudo reboot
+menu-1-1-exec = reboot
 
 menu-2-0 = power off
 menu-2-0-exec = sudo poweroff
@@ -472,7 +472,7 @@ compositing-border = over
 pseudo-transparency = true
 
 [global/wm]
-margin-top = 0
-margin-bottom = 0
+margin-top = 5
+margin-bottom = 5
 
 ; vim:ft=dosini

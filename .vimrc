@@ -161,7 +161,7 @@ let g:UltiSnipsEditSplit = "context"
 let g:UltiSnipsEnableSnipMate = 1
 let g:UltiSnipsSnippet = "/usr/share/vim/vimfiles/UltiSnips"
 
-let g:ale_completion_enabled=1
+let g:ale_completion_enabled=0
 let g:ale_lint_on_save=0
 let g:ale_lint_on_enter=0
 let g:ale_lint_on_text_changed=0

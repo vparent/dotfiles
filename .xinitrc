@@ -36,18 +36,18 @@ fi
 
 setxkbmap fr;
 
-#session=${1:-openbox};
+session=${1:-kde};
 case $session in
     'openbox')
-        /usr/bin/openbox-session
+        exec /usr/bin/openbox-session
         ;;
     'kde')
-        /usr/bin/startkde
+        exec /usr/bin/startplasma-x11
         ;;
     'i3')
-        /usr/bin/i3
+        exec /usr/bin/i3
         ;;
     *)
-        /usr/bin/openbox-session
+        exec /usr/bin/openbox-session
         ;;
 esac

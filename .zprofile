@@ -1,6 +1,5 @@
 umask 0027
 export QT_QPA_PLATFORMTHEME="qt5ct"
-export TERM="urxvt"
 
 # if Dotnet.Core is installed (in /opt), set up some environment variables
 if [ -d /opt/dotnet ];
