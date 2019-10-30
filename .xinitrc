@@ -36,7 +36,7 @@ fi
 
 setxkbmap fr;
 
-session=${1:-kde};
+session=$2;
 case $session in
     'openbox')
         exec /usr/bin/openbox-session
@@ -48,6 +48,6 @@ case $session in
         exec /usr/bin/i3
         ;;
     *)
-        exec /usr/bin/openbox-session
+        echo "No desktop session selected"
         ;;
 esac
