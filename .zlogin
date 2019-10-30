@@ -49,6 +49,7 @@ case $nb_sess in
             esac
         fi
         [[ -f /usr/bin/nvidia-xrun ]] && /usr/bin/nvidia-xrun $nsession
+        ;;
     *)
         logger "User: $USER Starting console session"
         ;;
