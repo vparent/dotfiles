@@ -3,7 +3,7 @@ echo -e "Enter the number corresponding to the desktop session or s for shutdown
 echo -e "If nvidia-xrun is usable on the system, press n to start a desktop session with it"
 echo "any other key will start a console session";
 
-read -n 1 nb_sess;
+read nb_sess;
 
 case $nb_sess in
     '1')
@@ -25,7 +25,7 @@ case $nb_sess in
         /usr/bin/reboot
         ;;
     'n')
-        [[ -f /usr/bin/nvidia-xrun ]] && read -n 1 nb_nsess;
+        [[ -f /usr/bin/nvidia-xrun ]] && echo -n "Enter a desktop session number: "; read nb_nsess;
         if [ -f /usr/bin/nvidia-xrun ]
         then
             case $nb_nsess in
