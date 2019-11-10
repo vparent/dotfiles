@@ -93,10 +93,8 @@ alias chmod='chmod --preserve-root'
 alias te='$EDITOR'
 
 # Python aliases
-alias python="python -B"
-alias python2="python2 -B"
-alias py="python -B"
-alias py2="python2 -B"
+alias py="python"
+alias py2="python2"
 alias ipy="ipython"
 alias ipy2="ipython2"
 alias ppy="ptpython"
