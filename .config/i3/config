@@ -34,7 +34,7 @@ set $right  l
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-set $term urxvt
+set $term konsole
 
 # start a terminal
 bindsym $mod+Return exec $term
@@ -59,8 +59,8 @@ bindsym $mod+x exec --no-startup-id morc_menu
 # change focus
 bindsym $mod+$left  focus left
 bindsym $mod+$down  focus down
-bindsym $mod+$up    focus up
 bindsym $mod+$right focus right
+bindsym $mod+$up    focus up
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left  focus left
@@ -81,7 +81,7 @@ bindsym $mod+Shift+Up    move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+Shift+v split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -125,8 +125,9 @@ set_from_resource $xcolor14 color14
 set_from_resource $xcolor7 color7
 set_from_resource $xcolor15 color15
 
-set_from_resources $background background
+#set_from_resources $background background
 set_from_resources $foreground foreground
+set $background "#00000017"
 
 # class                     border          backgr.     text            indicator   child_border
 #client.focused             $xcolor0        $xcolor1    $xbackground     $xcolor7
@@ -249,7 +250,7 @@ for_window [window_role="task_dialog"] floating enable
 #         #inactive_workspace  $xbackground    $xcolor0        $xforeground
 #}}
 
-bindsym $mod+m bar mode toggle
+#bindsym $mod+m bar mode toggle
 
 # Back and forth when pressing the same workspace keybind
 workspace_auto_back_and_forth yes
@@ -332,7 +333,7 @@ bindsym XF86AudioLowerVolume exec pamixer -d 5
 bindsym XF86MonBrightnessUp exec xbacklight -inc 5
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 
-bindsym $mod+Shift+V exec pavucontrol-qt
+bindsym $mod+Shift+S exec pavucontrol-qt
 
 bindsym $mod+b exec firefox
 
@@ -342,11 +343,8 @@ bindsym $mod+Shift+x exec xrdb -merge .Xresources
 
 exec_always --no-startup-id export QT_QPA_PLATFORMTHEME="qt5ct"
 exec_always --no-startup_id xrdb -quiet ~/.Xresources > /dev/null 2> /dev/null;
-exec_always --no-startup-id wal -i ~/.wallpaper > /dev/null 2> /dev/null;
-#exec_always --no-startup-id wal -Rent >/dev/null 2>/dev/null;
-exec_always --no-startup_id wal -i ~/.wallpaper > /dev/null 2> /dev/null;
+exec_always --no-startup-id wal -Rent >/dev/null 1>/dev/null;
 exec_always --no-startup-id /usr/bin/compton
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh i3
 exec_always --no-startup-id feh --bg-scale ~/.wallpaper
-exec_always --no-startup-id setxkbmap fr
 exec_always --no-startup-id xrandr --output HDMI-A-0 --mode 1920x1080
