@@ -30,13 +30,13 @@ case $nb_sess in
         then
             case $nb_nsess in
                 '1')
-                    nsession="kde"
+                    nsession=/usr/bin/startplasma-x11
                     ;;
                 '2')
-                    nsession="openbox"
+                    nsession=/usr/bin/openbox-session
                     ;;
                 '3')
-                    nsession="i3"
+                    nsession=/usr/bin/i3
                     ;;
                 's')
                     /usr/bin/shutdown -h now
@@ -57,5 +57,5 @@ esac
 
 if [[ ! -z $session ]] 
 then
-    [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && startx $session
+    [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && startx $session;
 fi
