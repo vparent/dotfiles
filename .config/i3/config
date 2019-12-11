@@ -259,7 +259,7 @@ workspace_auto_back_and_forth yes
 force_display_urgency_hint 500 ms
 
 # Locker configuration
-set $Locker i3lock -d -c $black0 -f
+set $Locker i3lock-fancy -d -c $black0 -f
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown, (b) off-screen
 mode "$mode_system" {
@@ -341,10 +341,10 @@ bindsym $mod+Shift+x exec xrdb -merge .Xresources
 
 #########################
 
-exec_always --no-startup-id export QT_QPA_PLATFORMTHEME="qt5ct"
-exec_always --no-startup_id xrdb -quiet ~/.Xresources > /dev/null 2> /dev/null;
-exec_always --no-startup-id wal -Rent >/dev/null 1>/dev/null;
-exec_always --no-startup-id /usr/bin/compton
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh i3
-exec_always --no-startup-id feh --bg-scale ~/.wallpaper
-exec_always --no-startup-id xrandr --output HDMI-A-0 --mode 1920x1080
+exec_always --no-startup-id /home/vparent/bin/screen_layout.sh >/dev/null 2>/dev/null &
+exec_always --no-startup-id feh --bg-scale ~/.wallpaper >/dev/null 2>/dev/null &
+exec_always --no-startup-id wal -i /home/vparent/.wallpaper --vte >/dev/null 2>/dev/null &;
+exec_always --no-startup-id export QT_QPA_PLATFORMTHEME="qt5ct" >/dev/null 2>/dev/null &
+exec_always --no-startup-id setxkbmap -layout fr -option caps:escape >/dev/null 2>/dev/null&
+exec_always --no-startup-id /usr/bin/compton >/dev/null 2>/dev/null &
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh i3 >/dev/null 2>/dev/null &

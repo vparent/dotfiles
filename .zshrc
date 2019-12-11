@@ -111,6 +111,8 @@ alias ~='cd ~/'
 
 alias d='dirs -v'
 
+alias vim='/usr/bin/nvim'
+
 if [ -f $HOME/bin/check_dskt_env ]
 then
     if $(check_dskt_env i3) || $(check_dskt_env KDE); then
@@ -173,3 +175,6 @@ RPROMPT=$'%? $vcs_info_msg_0_'
 PS1=$PROMPT
 zstyle ':vcs_info:git:*' formats '%F{240}(%b)%r%f'
 zstyle ':vcs_info:*' enable git
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /home/vparent/.cache/yay/symfony-cli/pkg/symfony-cli/usr/bin/symfony symfony

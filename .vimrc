@@ -156,7 +156,7 @@ map <Leader>te :NERDTreeToggle /etc<CR>
 call airline#parts#define('cmake', {'function': 'CMakeStat'})
 let g:airline_section_b = airline#section#create_left(['cmake'])
 
-let g:UltiSnipsUsePythonVersion = 3
+let g:UltiSnipsUsePythonVersion = 3.8
 let g:UltiSnipsEditSplit = "context"
 let g:UltiSnipsEnableSnipMate = 1
 let g:UltiSnipsSnippet = "/usr/share/vim/vimfiles/UltiSnips"
@@ -216,7 +216,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'roxma/vim-hug-neovim-rpc'
     endif
     Plug 'Shougo/deoplete.nvim'
-    Plug 'deoplete-plugins/deoplete-jedi'
+    "Plug 'deoplete-plugins/deoplete-jedi'
     Plug 'ryanoasis/vim-devicons'
     Plug 'scrooloose/nerdtree'
     Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -240,24 +240,24 @@ call plug#begin('~/.vim/plugged')
 call plug#end()
 
 let g:deoplete#enable_at_startup = 1
-" let g:deoplete#disable_auto_complete=1
+"let g:deoplete#disable_auto_complete=1
 "let g:deoplete#auto_complete_delay = 100
 let g:deoplete#num_processes = 6
 let g:deoplete#on_insert_enter = 0
 let g:deoplete#on_text_changed_i = 0
 call deoplete#custom#option('smart_case', v:true)
 
-if (executable('pyls'))
-    let s:pyls_path = fnamemodify('python', ':h') . '/' . 'pyls'
-    augroup LspPython
-        autocmd!
-        autocmd User lsp_setup call lsp#register_server({
-                    \'name': 'pyls',
-                    \'cmd': {server_info->['pyls']},
-                    \'whitelist': ['python']
-                    \})
-    augroup END
-endif
+"if (executable('pyls'))
+"    let s:pyls_path = fnamemodify('python', ':h') . '/' . 'pyls'
+"    augroup LspPython
+"        autocmd!
+"        autocmd User lsp_setup call lsp#register_server({
+"                    \'name': 'pyls',
+"                    \'cmd': {server_info->['pyls']},
+"                    \'whitelist': ['python']
+"                    \})
+"    augroup END
+"endif
 if executable('clangb')
     au User lsp_setup call lsp#register_server({
                 \ 'name': 'clangd',
