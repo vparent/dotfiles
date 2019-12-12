@@ -103,6 +103,8 @@ nnoremap <C-t> :tabnew<cr>
 "nnoremap <F5> :exec'!python' shellescape (@%, 1)<cr>
 nnoremap <F5> <Esc>:w<CR>:!clear;python %<CR>
 
+nnoremap <C-g> <CR>:!gcc %;./a.out<CR>
+
 nnoremap <C-m>b : !make all<cr>
 nnoremap <C-m>c : !make clean<cr>
 nnoremap <C-m>t : !make test<cr>
