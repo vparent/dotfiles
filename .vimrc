@@ -1,4 +1,14 @@
 " Use " for commenting
+"
+" Plugin list:
+" - vim-plug (plugin manager) (execute PlugInstall to instll plugins,
+"   PlugUpdate to update the plugins)
+" - vim-airline (for the bar) (+ vim-airline-themes )
+" - vim-ale (asynchronous linter)
+" - vim-nerdcommenter
+" - vim-ranger
+" - tagbar and/or taglist: for tag listing
+
 filetype on
 filetype indent on
 filetype plugin on
@@ -142,12 +152,6 @@ function! CMakeStat()
     return substitute(retstr, '^\s*\(.\{-}\)\s*$', '\1', '')
 endfunction
 
-let g:EasyMotion_startofline = 0
-map <Leader>J <Plug>(easymotion-sol-j)
-map <Leader>K <Plug>(easymotion-sol-k)
-map <Leader>w <Plug>(easymotion-iskeyword-w)
-map <Leader>b <Plug>(easymotion-iskeyword-b)
-
 let g:NERDTreeShowIgnoredStatus = 1
 map <Leader>t :NERDTreeToggle .<CR>
 map <Leader>ts :NERDTreeToggle /<CR>
@@ -216,7 +220,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'roxma/vim-hug-neovim-rpc'
     endif
     Plug 'Shougo/deoplete.nvim'
-    "Plug 'deoplete-plugins/deoplete-jedi'
+    Plug 'deoplete-plugins/deoplete-jedi'
     Plug 'ryanoasis/vim-devicons'
     Plug 'scrooloose/nerdtree'
     Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -247,17 +251,17 @@ let g:deoplete#on_insert_enter = 0
 let g:deoplete#on_text_changed_i = 0
 call deoplete#custom#option('smart_case', v:true)
 
-"if (executable('pyls'))
-"    let s:pyls_path = fnamemodify('python', ':h') . '/' . 'pyls'
-"    augroup LspPython
-"        autocmd!
-"        autocmd User lsp_setup call lsp#register_server({
-"                    \'name': 'pyls',
-"                    \'cmd': {server_info->['pyls']},
-"                    \'whitelist': ['python']
-"                    \})
-"    augroup END
-"endif
+if (executable('pyls'))
+    let s:pyls_path = fnamemodify('python', ':h') . '/' . 'pyls'
+    augroup LspPython
+        autocmd!
+        autocmd User lsp_setup call lsp#register_server({
+                    \'name': 'pyls',
+                    \'cmd': {server_info->['pyls']},
+                    \'whitelist': ['python']
+                    \})
+    augroup END
+endif
 if executable('clangb')
     au User lsp_setup call lsp#register_server({
                 \ 'name': 'clangd',
