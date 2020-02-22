@@ -27,7 +27,7 @@ bindkey -v
 zstyle :compinstall filename '/home/vparent/.zshrc'
 
 export EDITOR='nvim'
-export PATH=$PATH:$HOME/.local/bin:.:/usr/lib/mono/fsharp/:$HOME/.gem/ruby/2.6.0/bin
+export PATH=$PATH:$HOME/.local/bin:.:/usr/lib/mono/fsharp/:$HOME/.gem/ruby/2.7.0/bin
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 case $HIST_STAMPS in
@@ -72,7 +72,8 @@ alias path='echo $PATH | tr -s ":" "\n"'
 
 alias reload='source ~/.zshrc'
 
-alias rmf="rm -rf"
+alias rm="rm -I"
+alias rmf="rm -rfI"
 
 alias prjprg="cd ~/dev/INSA/Cours/PrjProg/Automate-ique"
 
@@ -111,13 +112,11 @@ alias ~='cd ~/'
 
 alias d='dirs -v'
 
-alias vim='/usr/bin/nvim'
-
 if [ -f $HOME/bin/check_dskt_env ]
 then
     if $(check_dskt_env i3) || $(check_dskt_env KDE); then
         #. /usr/share/powerline/bindings/zsh/powerline.zsh;
-        /usr/bin/neofetch
+        #/usr/bin/neofetch
         if $(check_dskt_env i3); then
             export QT_QPA_PLATFORMTHEME="qt5ct"
             xrdb ~/.Xresources
@@ -178,3 +177,5 @@ zstyle ':vcs_info:*' enable git
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /home/vparent/.cache/yay/symfony-cli/pkg/symfony-cli/usr/bin/symfony symfony
+
+zmodload zsh/zpty

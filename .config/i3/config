@@ -346,5 +346,5 @@ exec_always --no-startup-id feh --bg-scale ~/.wallpaper >/dev/null 2>/dev/null &
 exec_always --no-startup-id wal -i /home/vparent/.wallpaper --vte >/dev/null 2>/dev/null &;
 exec_always --no-startup-id export QT_QPA_PLATFORMTHEME="qt5ct" >/dev/null 2>/dev/null &
 exec_always --no-startup-id setxkbmap -layout fr -option caps:escape >/dev/null 2>/dev/null&
-exec_always --no-startup-id /usr/bin/compton >/dev/null 2>/dev/null &
+exec_always --no-startup-id /usr/bin/picom --conf .config/picom.conf >/dev/null 2>/dev/null &
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh i3 >/dev/null 2>/dev/null &

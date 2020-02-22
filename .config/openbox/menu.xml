@@ -30,12 +30,11 @@
     </menu>
 
     <menu id="apps-editors-menu" label="Editors">
-        <item label="GVim">
+        <item label="Neovim-Qt">
             <action name="Execute">
-                <command>gvim</command>
+                <command>nvim-qt</command>
                 <startupnotify>
                     <enabled>yes</enabled>
-                    <wmclass>GVim</wmclass>
                 </startupnotify>
             </action>
         </item>
