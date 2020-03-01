@@ -15,7 +15,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugin' }
 
 	" Deoplete sources {{{1 "
-	 Plug 'Shougo/deoplete-clangx'
+	 "Plug 'Shougo/deoplete-clangx'
 	 Plug 'Shougo/neco-vim'
 	 Plug 'Shougo/neoinclude.vim'
 	 Plug 'Shougo/neco-syntax'
@@ -48,12 +48,13 @@ let g:airline#extensions#ale#enabled=1
 " deoplete settings {{{1 "
 let g:deoplete#enable_at_startup = 1
 "let g:deoplete#ignore_case = 0
-"let g:deoplete#smart_case = 1
+let g:deoplete#smart_case = 1
 
 let g:deoplete#sources#jedi#enable_typeinfo = 1
 
 let g:deoplete#ignore_sources = get(g:, 'deoplete#ignore_sources', {})
 let g:deoplete#ignore_sources.php = ['omni']
+let auto_complete_delay = 500
 " deoplete settings}}} "
 
 let g:clang_library_path='/usr/lib/libclang.so'
@@ -66,14 +67,16 @@ map <Leader>te :NERDTreeToggle /etc<CR>
 let g:UltiSnipsEditSplit = "context"
 let g:UltiSnipsEnableSnipMate = 1
 let g:UltiSnipsSnippet = "/usr/share/vim/vimfiles/UltiSnips"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 let g:ale_completion_enabled=0
-let g:ale_lint_on_save=1
+let g:ale_lint_on_save=0
 let g:ale_lint_on_enter=0
-let g:ale_lint_on_text_changed=1
+let g:ale_lint_on_text_changed=0
 let g:ale_lint_on_insert_leave=0
-let g:ale_lint_on_filetype_changed=-1
-let g:ale_fix_on_save=1
+let g:ale_lint_on_filetype_changed=0
+let g:ale_fix_on_save=0
 let g:ale_open_list=0
 let g:ale_linters = {
             \'pyhton': ['pylint'],
@@ -107,5 +110,6 @@ nnoremap <C-n>d :ALEDetail<CR>
 autocmd! BufNewFile,BufRead *vs,*gs,*fs set ft=glsl
 
 let g:lsp_fold_enabled = 0
+let g:lsp_signature_help_enabled = 0
 
 nmap <F7> :TagbarToggle<CR>

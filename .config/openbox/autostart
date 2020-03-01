@@ -16,12 +16,12 @@
 #xfce-mcs-manager &
 
 $HOME/bin/xrandr_layout.sh
+picom -b --config .config/picom.conf > /dev/null 2> /dev/null
 setxkbmap fr -option "caps:escape"
 yakuake > /dev/null 2> /dev/null &
 feh --bg-fill '/home/vparent/.wallpaper' > /dev/null 2> /dev/null &
 conky -q -c /home/vparent/.config/conky/conky_right.conf > /dev/null 2> /dev/null &
 conky -q -c /home/vparent/.config/conky/conky_left.conf > /dev/null 2> /dev/null &
-picom -b --config .config/picom.conf > /dev/null 2> /dev/null
 #/home/vparent/.config/polybar/launch.sh openbox &
 #conky -q -c /home/vparent/.config/conky/conky_center.conf > /dev/null 2> /dev/null &
 #$HOME/.local/bin/battery_watcher &

@@ -182,15 +182,6 @@
                 </startupnotify>
             </action>
         </item>
-        <item label="PCmanFM">
-            <action name="Execute">
-                <command>pcmanfm</command>
-                <startupnotify>
-                    <enabled>yes</enabled>
-                    <wmclass>pcmanfm</wmclass>
-                </startupnotify>
-            </action>
-        </item>
     </menu>
 
     <menu id="apps-fileman-music" label="Music">

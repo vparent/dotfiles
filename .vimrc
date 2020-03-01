@@ -26,8 +26,8 @@ set foldmethod=syntax
 " Always wrap long lines:
 set wrap
 
-set background="dark"
-set termguicolors
+"set background="dark"
+"set termguicolors
 
 set laststatus=2
 set noshowmode
@@ -84,3 +84,5 @@ let g:mapleader=","
 
 autocmd Filetype python source $HOME/.vim/conf/py.vim
 autocmd Filetype vim set foldmethod=marker
+
+"colorscheme Mustang
