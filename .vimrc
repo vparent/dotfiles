@@ -83,6 +83,8 @@ inoremap jk <esc>
 
 let g:mapleader=","
 
+let g:python3_host_prog="/usr/bin/python3"
+
 autocmd Filetype python source $HOME/.vim/conf/py.vim
 autocmd Filetype vim set foldmethod=marker
 

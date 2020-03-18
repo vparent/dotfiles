@@ -1,6 +1,6 @@
 if ! [[ $TMUX || $SSH_CLIENT ]]
 then
-    echo -e "Available window manager session:\n\t1 - KDE Plasma 5\n\t2 - Openbox window manager\n\t3 - i3-gap Tiling WM\n"
+    echo -e "Available window manager session:\n\t1 - KDE Plasma 5 - Xorg\n\t2 - Openbox window manager\n\t3 - i3-gap Tiling WM\n\t4 - Kde Plasma 5 - Wayland"
     echo -e "Enter the number corresponding to the desktop session or s for shutdown, r for reboot"
     echo -e "If nvidia-xrun is usable on the system, press n to start a desktop session with it"
     echo "any other key will start a console session";
@@ -9,7 +9,7 @@ then
 
     case $nb_sess in
         '1')
-            logger "User: $USER Starting KDE plasma session"
+            logger "User: $USER Starting KDE plasma xorg session"
             session="kde"
             ;;
         '2')
@@ -20,6 +20,10 @@ then
             logger "User: $USER Starting i3 session"
             session="i3"
             ;;
+		'4')
+			logger "User $USER Starting KDE plasma wayland session"
+			session="plasma-wayland"
+			;;
         's')
             /usr/bin/shutdown -h now
             ;;
@@ -50,6 +54,7 @@ then
                         ;;
                 esac
             fi
+
             [[ -f /usr/bin/nvidia-xrun ]] && /usr/bin/nvidia-xrun $nsession
             ;;
         *)
@@ -59,6 +64,10 @@ then
 
     if [[ ! -z $session ]] 
     then
-        [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && startx $session;
+		if [[ $session = "plasma-wayland" ]]; then
+			XDG_SESSION_TYPE=wayland dbus-run-session startplasma-wayland;
+		else
+			[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && startx $session;
+		fi
     fi
 fi
