@@ -5,10 +5,11 @@ filetype plugin on
 filetype plugin indent on
 
 if !has('nvim')
-	set nocompatible
 	set nocp
 	set ttymouse=xterm2
 endif
+
+set nocompatible
 
 set encoding=utf-8
 set spelllang=fr,en
