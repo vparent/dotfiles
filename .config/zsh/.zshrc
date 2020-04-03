@@ -12,19 +12,19 @@ zstyle ':completion:*' menu select=1
 zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
 zstyle ':completion:*' special-dirs true
 zstyle ':completion:*' verbose true
-zstyle :compinstall filename '/home/vparent/.zshrc'
+zstyle :compinstall filename '$ZDOTDIR/.zshrc'
 
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 # Lines configured by zsh-newuser-install
-HISTFILE=$HOME/.config/zsh/histfile
+HISTFILE=$ZDOTDIR/histfile
 HISTSIZE=20000
 SAVEHIST=20000
 setopt appendhistory autocd extendedglob notify
 bindkey -v
 # End of lines configured by zsh-newuser-install
-zstyle :compinstall filename '/home/vparent/.zshrc'
+zstyle :compinstall filename '$ZDOTDIR/.zshrc'
 
 export EDITOR='nvim'
 export PATH=$PATH:$HOME/.local/bin:.:/usr/lib/mono/fsharp/:$HOME/.gem/ruby/2.7.0/bin
@@ -70,7 +70,7 @@ alias mkdir='mkdir -pv'
 alias grep='grep --color=auto'
 alias path='echo $PATH | tr -s ":" "\n"'
 
-alias reload='source ~/.zshrc'
+alias reload='source $ZDOTDIR/.zshrc'
 
 alias rm="rm -I"
 alias rmf="rm -rfI"
