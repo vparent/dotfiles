@@ -18,7 +18,7 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 # Lines configured by zsh-newuser-install
-HISTFILE=~/.zsh_history
+HISTFILE=$HOME/.config/zsh/histfile
 HISTSIZE=20000
 SAVEHIST=20000
 setopt appendhistory autocd extendedglob notify

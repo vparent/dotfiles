@@ -4,4 +4,4 @@ export PYTHONDONTWRITEBYTECODE=1
 
 export DOTNET_ROOT=/usr/share/dotnet;
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
-export MSBuildSDKsPath="/usr/share/dotnet/sdk/3.1.102/Sdks";
+export MSBuildSDKsPath="/usr/share/dotnet/sdk/3.1.103/Sdks";
