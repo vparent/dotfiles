@@ -1,3 +1,5 @@
+runtime! archlinux.vim
+
 syntax on
 filetype on
 filetype indent on
@@ -85,7 +87,17 @@ let g:mapleader=","
 
 let g:python3_host_prog="/usr/bin/python3"
 
-autocmd Filetype python source $HOME/.vim/conf/py.vim
+autocmd Filetype python source $XDG_CONFIG_HOME/vim/conf/py.vim
 autocmd Filetype vim set foldmethod=marker
 
 "colorscheme Mustang
+
+" XDG specification compliance settings
+set viewdir=$XDG_CACHE_HOME/vim/view
+
+if !has('nvim')
+	set viminfo+='1000,n$XDG_DATA_HOME/vim/viminfo
+
+	set runtimepath^=$XDG_CONFIG_HOME/vim,$XDG_CONFIG_HOME/vim/after
+	let &packpath = &runtimepath
+endif

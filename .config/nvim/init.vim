@@ -1,8 +1,8 @@
-set runtimepath^=~/.vim runtimepath+=~/.vim/after
+set runtimepath^=$XDG_CONFIG_HOME/vim runtimepath+=$XDG_CONFIG_HOME/after
 let &packpath = &runtimepath
-source ~/.vimrc
+source $XDG_CONFIG_HOME/vim/vimrc
 
-call plug#begin('~/.vim/plugged')
+call plug#begin('$XDG_CONFIG_HOME/vim/plugged')
     Plug 'dense-analysis/ale'
 	Plug 'prabirshrestha/async.vim'
     Plug 'jiangmiao/auto-pairs'

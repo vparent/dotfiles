@@ -15,7 +15,7 @@ zstyle ':completion:*' verbose true
 zstyle :compinstall filename '$ZDOTDIR/.zshrc'
 
 autoload -Uz compinit
-compinit
+compinit -d $ZDOTDIR/.zcompdump
 # End of lines added by compinstall
 # Lines configured by zsh-newuser-install
 HISTFILE=$ZDOTDIR/histfile
@@ -25,6 +25,8 @@ setopt appendhistory autocd extendedglob notify
 bindkey -v
 # End of lines configured by zsh-newuser-install
 zstyle :compinstall filename '$ZDOTDIR/.zshrc'
+
+zstyle ':completion:*' menu select
 
 export EDITOR='nvim'
 export PATH=$PATH:$HOME/.local/bin:.:/usr/lib/mono/fsharp/:$HOME/.gem/ruby/2.7.0/bin
@@ -85,7 +87,7 @@ alias del="gio trash"
 
 alias rps='cd ~/src/Bfs'
 
-alias gdb='gdb -q'
+alias gdb='gdb -q -nh  -x $XDG_CONFIG_HOME/gdb/init'
 alias cgdb='cgdb -q'
 alias dbg='cgdb -q'
 
@@ -93,14 +95,25 @@ alias chmod='chmod --preserve-root'
 
 alias te='$EDITOR'
 
+alias wget='wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"'
+
+alias tmux="tmux -f $HOME/.config/tmux/tmux.conf"
+
+alias vim="vim -u $XDG_CONFIG_HOME/vim/vimrc"
+
+alias sqlite3='sqlite3 -init "$XDG_CONFIG_HOME"/sqlite3/sqliterc'
+
+alias emacs='emacs --no-init-file --load=$XDG_CONFIG_HOME/emacs/config.el'
+
+alias feh='feh --no-fehbg'
+
+alias src='cd $HOME/.local/src'
+
 # Python aliases
 alias py="python"
 alias py2="python2"
 alias ipy="ipython"
 alias ipy2="ipython2"
-alias ppy="ptpython"
-alias ppy2="ptpython2"
-alias pipy="ptipython"
 
 # Oh-my-zsh aliases
 alias ..='cd ../'
@@ -111,6 +124,7 @@ alias /='cd /'
 alias ~='cd ~/'
 
 alias d='dirs -v'
+
 
 if [ -f $HOME/bin/check_dskt_env ]
 then
@@ -143,27 +157,8 @@ zmodload zsh/nearcolor
 autoload -U colors && colors
 autoload -Uz vcs_info
 
-#TMOUT=1
-#CPU_USAGE=$(cat /proc/stat | grep 'cpu' | awk '{usage=($2+$4)*100/($2+$4+$5)} END {printf "%3d%s", usage, "%%" }')
-#RAM_USAGE=$(free | grep Mem | awk '{printf "%3d%s", $3/$2 * 100.0, "%%"}')
-#if [ -n "$(ifconfig enp3s0 | grep 'inet')" ]; then
-#	IP_ADDR=$(ifconfig enp3s0 | grep 'inet ' | awk '{ printf $2 }');
-#else
-#	if [ -n "$(ifconfig wlo1 | grep 'inet')" ]; then
-#		IP_ADDR=$(ifconfig wlo1 | grep 'inet ' | awk '{ printf $2 }');
-#	fi
-#fi
-#GIT_BRCH=$(if [ -d .git ]; then echo -n '\ue725 '; echo $(/usr/bin/git rev-parse --abbrev-ref HEAD); else echo ""; fi;)
-#
-## Update each TMOUT seconds the prompt
-#TRAPALRM() {
-#    CPU_USAGE=$(cat /proc/stat | grep 'cpu' | awk '{usage=($2+$4)*100/($2+$4+$5)} END {printf "%3d%s", usage, "%%" }')
-#    RAM_USAGE=$(free | grep Mem | awk '{printf "%3d%s", $3/$2 * 100.0, "%%"}')
-#    GIT_BRCH=$(if [ -d .git ]; then echo -n '\ue725 '; echo $(/usr/bin/git rev-parse --abbrev-ref HEAD); else echo ""; fi;)
-#    zle reset-prompt
-#}
-#
-#PS2=$'\xe2\x95\xad\xe2\x94\x80\\ %F{red}\uf133 %D{%a %f %b%p} \uf64f %D{%H:%M:%S%p}%f %K \uf2c0 %F{blue}%n%f @ %F{magenta}'$IP_ADDR$'%f \uf07b :%F{green}%~%f ?:%F{red}%?%f jobs:%F{blue}%j%k%f \uf085 %F{red}'$CPU_USAGE$'%f \uf2db %F{blue}'$RAM_USAGE$'%f '$GIT_BRCH$'\n\xe2\x95\xb0\xe2\x94\x80> '
+autoload -Uz promptinit
+promptinit
 
 precmd_vcs_info() { vcs_info }
 precmd_functions+=( precmd_vcs_info )
