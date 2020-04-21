@@ -107,7 +107,9 @@ alias emacs='emacs --no-init-file --load=$XDG_CONFIG_HOME/emacs/config.el'
 
 alias feh='feh --no-fehbg'
 
-alias src='cd $HOME/.local/src'
+alias src='[[ $(pwd) = $HOME ]] && cd $HOME/.local/src || cd ./src'
+
+alias view='view -R'
 
 # Python aliases
 alias py="python"
