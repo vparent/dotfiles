@@ -1,6 +1,6 @@
 set runtimepath^=$XDG_CONFIG_HOME/vim runtimepath+=$XDG_CONFIG_HOME/after
 let &packpath = &runtimepath
-source $XDG_CONFIG_HOME/vim/vimrc
+"source $XDG_CONFIG_HOME/vim/vimrc
 
 call plug#begin('$XDG_CONFIG_HOME/vim/plugged')
     Plug 'dense-analysis/ale'
@@ -54,8 +54,8 @@ let g:deoplete#smart_case = 1
 
 let g:deoplete#sources#jedi#enable_typeinfo = 1
 
-let g:deoplete#ignore_sources = get(g:, 'deoplete#ignore_sources', {})
-let g:deoplete#ignore_sources.php = ['omni']
+"let g:deoplete#ignore_sources = get(g:, 'deoplete#ignore_sources', {})
+"let g:deoplete#ignore_sources.php = ['omni']
 let auto_complete_delay = 500
 " deoplete settings}}} "
 
