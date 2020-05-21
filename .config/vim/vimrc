@@ -83,6 +83,8 @@ nnoremap <space> za
 nnoremap gV `[v`]
 inoremap jk <esc>
 
+inoremap /* /*<space><space>*/<left><left><left>
+
 let g:mapleader=","
 
 let g:python3_host_prog="/usr/bin/python3"

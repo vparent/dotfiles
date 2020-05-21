@@ -5,6 +5,7 @@ SETUVAR --export GNUPGHOME:/home/vparent/\x2elocal/share/gnupg
 SETUVAR --export LESSHISTFILE:\x2d
 SETUVAR --export LESSKEY:/home/vparent/\x2econfig/less/lesskey
 SETUVAR --export RANDFILE:/home/vparent/\x2econfig/openssl/rand
+SETUVAR VK_ICD_FILENAMES:/usr/share/vulkan/icd\x2ed/radeon_icd\x2ex86_64\x2ejson
 SETUVAR --export WGETRC:/home/vparent/\x2econfig/wgetrc
 SETUVAR --export XAUTHORITY:/home/vparent/\x2ecache/Xauthority
 SETUVAR --export XINITRC:/home/vparent/\x2econfig/X11/xinitrc
