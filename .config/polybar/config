@@ -104,13 +104,13 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = Fura Code Nerd Font:pixelsize=9;1
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-0 = FuraCode Nerd Font:pixelsize=12;1
+font-1 = unifont:fontformat=truetype:size=12:antialias=false;0
 font-2 = siji:pixelsize=10;1
 
-modules-left = i3 xwindow filesystem wlan eth
+modules-left = xwindow filesystem wlan eth
 modules-center = date
-modules-right = backlight-acpi pulseaudio cpu memory xkeyboard battery temperature powermenu 
+modules-right = pulseaudio cpu memory xkeyboard temperature powermenu 
 
 tray-position = right
 tray-padding = 2
@@ -284,7 +284,7 @@ label = %percentage_used%%
 
 [module/wlan]
 type = internal/network
-interface = wlo1
+interface = wlp0s20f0u7
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
@@ -306,7 +306,7 @@ ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth]
 type = internal/network
-interface = enp2s0
+interface = enp3s0
 interval = 3.0
 
 format-connected-underline = #55aa55
@@ -481,8 +481,8 @@ enable-scroll = false
 
 [settings]
 screenchange-reload = true
-compositing-background = xor
-;compositing-background = screen
+;compositing-background = xor
+compositing-background = screen
 ;compositing-foreground = source
 compositing-border = over
 pseudo-transparency = true

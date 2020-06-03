@@ -26,3 +26,4 @@
 #/home/vparent/.config/polybar/launch.sh openbox &
 #conky -q -c /home/vparent/.config/conky/conky_center.conf > /dev/null 2> /dev/null &
 #$HOME/.local/bin/battery_watcher &
+.config/polybar/launch.sh openbox > /dev/null 2> /dev/null &

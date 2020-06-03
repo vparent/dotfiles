@@ -1,3 +1,4 @@
+#! /bin/bash
 # Terminate already running bar instances
 killall -w -q polybar -s SIGINT
 

@@ -109,6 +109,7 @@ nnoremap <C-n>d :ALEDetail<CR>
 " LSP settings {{{ "
 let g:lsp_fold_enabled = 0
 let g:lsp_signature_help_enabled = 0
+let g:lsp_async_completion = 1
 " }}} LSP settings "
 
 autocmd! BufNewFile,BufRead *vs,*gs,*fs set ft=glsl
