@@ -40,7 +40,7 @@
             'Active' - where the active window is -->
     </placement>
     <theme>
-        <name>Arc-Darker-solid</name>
+        <name></name>
         <titleLayout/>
             <!--
                 available characters are NDSLIMC, each can occur at most once.
@@ -52,7 +52,7 @@
                 S: shade (roll up/down)
                 D: omnipresent (on all desktops).
             -->
-        <keepBorder>yes</keepBorder>
+        <keepBorder>no</keepBorder>
         <animateIconify>yes</animateIconify>
         <font place="ActiveWindow">
             <name>sans</name>
@@ -108,6 +108,7 @@
             <slant>normal</slant>
                 <!-- 'italic' or 'normal' -->
         </font>
+		<cornerRadius menu="yes">8</cornerRadius>
     </theme>
     <desktops>
         <!-- this stuff is only used at startup, pagers allow you to change them
@@ -162,7 +163,7 @@
             <floatingX>0</floatingX>
             <floatingY>20</floatingY>
             <noStrut>no</noStrut>
-            <stacking>Below</stacking>
+            <stacking>Above</stacking>
                 <!-- 'Above', 'Normal', or 'Below' -->
             <direction>Horizontal</direction>
                 <!-- 'Vertical' or 'Horizontal' -->

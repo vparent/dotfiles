@@ -39,10 +39,8 @@ setxkbmap fr -variant latin9 -option "caps:escape" -option "terminate:ctrl_bksp"
 autocutsel -fork &
 autocutsel -selection PRIMARY -fork &
 feh --no-fehbg --bg-scale $(readlink $XDG_CONFIG_HOME/wallpaper) &
-albert > /dev/null 2> /dev/null &
 export QT_QPA_PLATFORMTHEME=qt5ct
-xrandr --output DVI-D-1 --mode 1920x1080 --primary
-xrandr --output HDMI-1 --mode 1920x1080 --right-of DVI-D-1
+screen_layout.sh
 picom > /dev/null 2> /dev/null &
 
 exec openbox-session

@@ -32,9 +32,6 @@ end
 function view 
 	command vim -R -c "syntax on" $argv
 end
-function vim
-	command nvim $argv
-end
 function objdump
 	command objdump -M intel $argv
 end
