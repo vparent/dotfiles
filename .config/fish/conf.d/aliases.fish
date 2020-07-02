@@ -30,7 +30,7 @@ function rmf
 	command rm -rfI $argv
 end
 function view 
-	command view -R -c "syntax on" $argv
+	command vim -R -c "syntax on" $argv
 end
 function objdump
 	command objdump -M intel $argv
