@@ -34,13 +34,4 @@ if [[ -d /etc/X11/xinit/nvidia-xinitrc.d ]] ; then
  unset f
 fi
 
-xrandr --setprovideroutputsource modesetting NVIDIA-0
-xrandr --auto
-
-if [[ -f "$userxinitrc" ]]; then
-    sh ${userxinitrc} $*
-else
-    if [[ $# -gt 0 ]]; then
-        sh -c "exec $*"
-	fi
-fi
+bash $HOME/.config/X11/xinitrc
