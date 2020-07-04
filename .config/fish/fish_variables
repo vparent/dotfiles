@@ -1,5 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR DOTNET_CLI_TELEMETRY_OPTOUT:1
 SETUVAR --export EDITOR:vim
 SETUVAR --export GNUPGHOME:/home/vparent/\x2elocal/share/gnupg
 SETUVAR --export LESSHISTFILE:\x2d
