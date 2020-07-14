@@ -1,9 +1,12 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR DOTNET_CLI_TELEMETRY_OPTOUT:1
 SETUVAR --export EDITOR:vim
 SETUVAR --export GNUPGHOME:/home/vparent/\x2elocal/share/gnupg
 SETUVAR --export LESSHISTFILE:\x2d
 SETUVAR --export LESSKEY:/home/vparent/\x2econfig/less/lesskey
+SETUVAR --path PATH:/home/vparent/\x2elocal/bin\x1e/usr/local/sbin\x1e/usr/local/bin\x1e/usr/bin\x1e/usr/bin/site_perl\x1e/usr/bin/vendor_perl\x1e/usr/bin/core_perl\x1e/home/vparent/\x2elocal/lib/node_modules/\x40angular/cli/bin
+SETUVAR PYTHONDONTWRITEBYTECODE:1
 SETUVAR --export RANDFILE:/home/vparent/\x2econfig/openssl/rand
 SETUVAR VK_ICD_FILENAMES:/usr/share/vulkan/icd\x2ed/radeon_icd\x2ex86_64\x2ejson
 SETUVAR --export WGETRC:/home/vparent/\x2econfig/wgetrc
@@ -35,7 +38,7 @@ SETUVAR fish_color_status:red
 SETUVAR fish_color_user:brgreen
 SETUVAR fish_color_valid_path:\x2d\x2dunderline
 SETUVAR fish_greeting:\x1d
-SETUVAR fish_key_bindings:fish_vi_key_bindings
+SETUVAR fish_key_bindings:fish_default_key_bindings
 SETUVAR fish_pager_color_completion:\x1d
 SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline

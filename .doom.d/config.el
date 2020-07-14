@@ -28,8 +28,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-;(setq doom-theme 'doom-one)
-(setq doom-theme 'doom-palenight)
+(setq doom-theme 'doom-one)
 
 ; Set transparency for focused and unfocused frames
 (set-frame-parameter (selected-frame) 'alpha '(95 . 90))
@@ -62,3 +61,16 @@
 ;; they are implemented.
 
 (setq message-kill-buffer-on-exit t)
+
+(setq rustic-lsp-server 'rust-analyser)
+
+(after! sh-script
+  (set-company-backend! 'sh-mode
+    '(company-shell :with company-yasnippet)))
+
+(after! cc-mode
+  (set-company-backend! 'c-mode
+    '(:separate company-irony-c-headers company-irony company-yasnippet)))
+
+(after! lsp-python-ms
+  (set-lsp-priority! 'mspyls 1))
