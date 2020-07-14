@@ -119,8 +119,8 @@
 
             use obconf if you want to change these without having to log out
         and back in -->
-        <number>4</number>
-        <firstdesk>1</firstdesk>
+        <number>6</number>
+        <firstdesk>0</firstdesk>
         <names>
             <!-- set names up here if you want to, like this:
                 <name>desktop 1</name>
