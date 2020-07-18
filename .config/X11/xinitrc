@@ -40,19 +40,26 @@ export QT_QPA_PLATFORMTHEME=qt5ct
 if [[ $2 = "plasma" ]]
 then
 	export DESKTOP_SESSION=plasma
-	exec startplasma-x11
+
+	if [[ $3 = "wayland" ]]
+	then
+		XDG_SESSION_TYPE=wayland startplasma-wayland
+	else
+		exec startplasma-x11
+	fi
 else
 	autocutsel -fork &
 	autocutsel -selection PRIMARY -fork &
 	feh --no-fehbg --bg-scale $(readlink $XDG_CONFIG_HOME/wallpaper) &
 	screen_layout.sh
-	picom > /dev/null 2> /dev/null &
 	dunst &
 
 	if [[ $2 = "openbox" ]]
 	then
+		picom > /dev/null 2> /dev/null &
 		exec openbox-session
-	else
+	elif [[ $2 = "spectrwm" ]]
+	then
 		exec spectrwm
 	fi
 fi
