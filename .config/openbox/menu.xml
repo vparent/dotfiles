@@ -2,227 +2,8 @@
 
 <openbox_menu xmlns="http://openbox.org/3.4/menu">
 
-    <menu id="apps-accessories-menu" label="Accessories">
-        <item label="Calculator">
-            <action name="Execute">
-                <command>gnome-calculator</command>
-                <startupnotify>
-                    <enabled>yes</enabled>
-                </startupnotify>
-            </action>
-        </item>
-        <item label="Character Map">
-            <action name="Execute">
-                <command>gnome-character-map</command>
-                <startupnotify>
-                    <enabled>yes</enabled>
-                </startupnotify>
-            </action>
-        </item>
-        <item label="Ark File Archiver">
-            <action name="Execute">
-                <command>ark</command>
-                <startupnotify>
-                    <enabled>yes</enabled>
-                </startupnotify>
-            </action>
-        </item>
-    </menu>
 
-    <menu id="apps-editors-menu" label="Editors">
-        <item label="Neovim-Qt">
-            <action name="Execute">
-                <command>nvim-qt</command>
-                <startupnotify>
-                    <enabled>yes</enabled>
-                </startupnotify>
-            </action>
-        </item>
-        <item label="Kate">
-            <action name="Execute">
-                <command>kate</command>
-                <startupnotify>
-                    <enabled>yes</enabled>
-                </startupnotify>
-            </action>
-        </item>
-    </menu>
 
-    <menu id="apps-term-menu" label="Terminals">
-        <item label="Termite">
-            <action name="Execute">
-                <command>termite</command>
-                <startupnotify>
-                    <enabled>yes</enabled>
-                </startupnotify>
-            </action>
-        </item>
-        <item label="Konsole">
-            <action name="Execute">
-                <command>konsole</command>
-                <startupnotify>
-                    <enabled>yes</enabled>
-                </startupnotify>
-            </action>
-        </item>
-        <item label="Xterm">
-            <action name="Execute"><command>xterm</command>
-                <startupnotify>
-                    <enabled>yes</enabled>
-                </startupnotify>
-            </action>
-        </item>
-    </menu>
-
-    <menu id="apps-net-menu" label="Internet">
-        <item label="Firefox">
-            <action name="Execute">
-                <command>firefox</command>
-                <startupnotify>
-                    <enabled>yes</enabled>
-                    <wmclass>Firefox</wmclass>
-                </startupnotify>
-            </action>
-        </item>
-        <item label="Opera">
-            <action name="Execute">
-                <command>opera</command>
-                <startupnotify>
-                    <enabled>yes</enabled>
-                    <wmclass>Opera</wmclass>
-                </startupnotify>
-            </action>
-        </item>
-        <item label="Chromium">
-            <action name="Execute">
-                <command>chromium</command>
-                <startupnotify>
-                    <enabled>yes</enabled>
-                    <wmclass>Chromium</wmclass>
-                </startupnotify>
-            </action>
-        </item>
-        <item label="Google Chrome">
-            <action name="Execute">
-                <command>google-chrome-stable</command>
-                <startupnotify>
-                    <enabled>yes</enabled>
-                    <wmclass>Google-chrome</wmclass>
-                </startupnotify>
-            </action>
-        </item>
-    </menu>
-
-    <menu id="apps-office-menu" label="Office">
-        <item label="OpenOffice Base">
-            <action name="Execute">
-                <command>loffice -base</command>
-            </action>
-        </item>
-        <item label="OpenOffice Calc">
-            <action name="Execute">
-                <command>loffice -calc</command>
-            </action>
-        </item>
-        <item label="OpenOffice Draw">
-            <action name="Execute">
-                <command>loffice -draw</command>
-            </action>
-        </item>
-        <item label="OpenOffice Impress">
-            <action name="Execute">
-                <command>loffice -impress</command>
-            </action>
-        </item>
-        <item label="OpenOffice Math">
-            <action name="Execute">
-                <command>loffice -math</command>
-            </action>
-        </item>
-        <item label="OpenOffice Printer Administration">
-            <action name="Execute">
-                <command>loffice-printeradmin</command>
-            </action>
-        </item>
-        <item label="OpenOffice Writer">
-            <action name="Execute">
-                <command>loffice -writer</command>
-            </action>
-        </item>
-    </menu>
-
-    <menu id="apps-multimedia-menu" label="Multimedia">
-        <item label="MPV">
-            <action name="Execute">
-                <command>mpv</command>
-                <startupnotify>
-                    <enabled>yes</enabled>
-                    <wmclass>mpv</wmclass>
-                </startupnotify>
-            </action>
-        </item>
-        <item label="VLC">
-            <action name="Execute">
-                <command>vlc</command>
-                <startupnotify>
-                    <enabled>yes</enabled>
-                    <wmclass>vlc</wmclass>
-                </startupnotify>
-            </action>
-        </item>
-    </menu>
-
-    <menu id="apps-fileman-menu" label="File Managers">
-        <item label="Dolphin">
-            <action name="Execute">
-                <command>dolphin</command>
-                <startupnotify>
-                    <enabled>yes</enabled>
-                    <wmclass>dolphin</wmclass>
-                </startupnotify>
-            </action>
-        </item>
-    </menu>
-
-    <menu id="apps-fileman-music" label="Music">
-        <item label="Qjackctl">
-            <action name="Execute">
-                <command>qjackctl</command>
-                <startupnotify>
-                    <enabled>yes</enabled>
-                    <wmclass>qjackctl</wmclass>
-                </startupnotify>
-            </action>
-        </item>
-    </menu>
-
-    <menu id="apps-graphics-menu" label="Graphics">
-        <item label="Gimp">
-            <action name="Execute">
-                <command>gimp</command>
-                <startupnotify>
-                    <enabled>yes</enabled>
-                </startupnotify>
-            </action>
-        </item>
-        <item label="Inkscape">
-            <action name="Execute">
-                <command>inkscape</command>
-                <startupnotify>
-                    <enabled>yes</enabled>
-                </startupnotify>
-            </action>
-        </item>
-        <item label="Krita">
-            <action name="Execute">
-                <command>krita</command>
-                <startupnotify>
-                    <enabled>yes</enabled>
-                    <wmclass>krita</wmclass>
-                </startupnotify>
-            </action>
-        </item>
-    </menu>
 
     <menu id="system-menu" label="System">
         <item label="Openbox Configuration Manager">
@@ -238,18 +19,58 @@
     </menu>
 
     <menu id="root-menu" label="Openbox 3">
-        <separator label="Applications" />
-        <menu id="apps-accessories-menu"/>
-        <menu id="apps-editors-menu"/>
-        <menu id="apps-graphics-menu"/>
-        <menu id="apps-net-menu"/>
-        <menu id="apps-office-menu"/>
-        <menu id="apps-multimedia-menu"/>
-        <menu id="apps-term-menu"/>
-        <menu id="apps-fileman-menu"/>
-        <separator label="System" />
-        <menu id="system-menu"/>
-        <separator />
+		<item label="Web navigator">
+			<action name="Execute">
+				<command>firefox</command>
+				<startupnotify>
+					<enabled>yes</enabled>
+					<wmclass>Firefox</wmclass>
+				</startupnotify>
+			</action>
+		</item>
+		<item label="Terminal">
+			<action name="Execute">
+				<command>alacritty</command>
+				<startupnotify>
+					<enabled>yes</enabled>
+				</startupnotify>
+			</action>
+		</item>
+		<item label="Editor">
+			<action name="Execute">
+				<command>emacs</command>
+				<startupnotify>
+					<enabled>yes</enabled>
+				</startupnotify>
+			</action>
+		</item>
+		<item label="File Manager">
+			<action name="Execute">
+				<command>pcmanfm-qt</command>
+				<startupnotify>
+					<enabled>yes</enabled>
+				</startupnotify>
+			</action>
+		</item>
+		<item label="Archive manager">
+			<action name="Execute">
+				<command>ark</command>
+				<startupnotify>
+					<enabled>yes</enabled>
+				</startupnotify>
+			</action>
+		</item>
+		<item label="Office Suite">
+			<action name="Execute">
+				<command>loffice -base</command>
+			</action>
+		</item>
+		<item label="Video player">
+			<action name="Execute">
+				<command>vlc</command>
+			</action>
+		</item>
+		<separator label="System" />
         <item label="Log Out">
             <action name="Exit">
                 <prompt>yes</prompt>

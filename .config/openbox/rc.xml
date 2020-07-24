@@ -428,21 +428,21 @@
 
             <!-- Keybindings for window switching with the arrow keys -->
 
-            <keybind key="W-A-Right">
+            <keybind key="W-A-l">
                 <action name="DirectionalCycleWindows">
                     <direction>right</direction>
                 </action>
             </keybind>
-            <keybind key="W-A-Left">
+            <keybind key="W-A-h">
                 <action name="DirectionalCycleWindows">
                     <direction>left</direction>
             </action></keybind>
-            <keybind key="W-A-Up">
+            <keybind key="W-A-k">
                 <action name="DirectionalCycleWindows">
                     <direction>up</direction>
                 </action>
             </keybind>
-            <keybind key="W-A-Down">
+            <keybind key="W-A-j">
                 <action name="DirectionalCycleWindows">
                     <direction>down</direction>
                 </action>
