@@ -48,15 +48,15 @@ then
 		exec startplasma-x11
 	fi
 else
+	picom > /dev/null 2> /dev/null &
 	autocutsel -fork &
 	autocutsel -selection PRIMARY -fork &
 	feh --no-fehbg --bg-scale $(readlink $XDG_CONFIG_HOME/wallpaper) &
-	screen_layout.sh
+	$HOME/.local/bin/screen_layout.sh &
 	dunst &
 
 	if [[ $2 = "openbox" ]]
 	then
-		picom > /dev/null 2> /dev/null &
 		exec openbox-session
 	elif [[ $2 = "spectrwm" ]]
 	then
