@@ -34,4 +34,4 @@ if [[ -d /etc/X11/xinit/nvidia-xinitrc.d ]] ; then
  unset f
 fi
 
-bash $HOME/.config/X11/xinitrc
+bash $HOME/.config/X11/xinitrc $*

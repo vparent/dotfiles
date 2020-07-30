@@ -34,6 +34,8 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
+/usr/bin/prime-offload
+
 setxkbmap fr -variant latin9 -option "caps:escape" -option "terminate:ctrl_bksp"
 export QT_QPA_PLATFORMTHEME=qt5ct
 
