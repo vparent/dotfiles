@@ -61,5 +61,8 @@ else
 	elif [[ $2 = "spectrwm" ]]
 	then
 		exec spectrwm
+	elif [[ $2 = "dwm" ]]
+	then
+		exec dwm
 	fi
 fi
