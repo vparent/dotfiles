@@ -60,3 +60,6 @@ function src
 		cd ./src
 	end
 end
+function npm
+	command npm -g --prefix=$HOME/.local $argv
+end

@@ -269,13 +269,13 @@
             <keybind key="W-f">
                 <action name="ToggleMaximize" />
             </keybind>
-            <keybind key="W-g">
+            <keybind key="W-h">
                 <action name="Iconify" />
             </keybind>
             <keybind key="W-r">
                 <action name="Resize" />
             </keybind>
-            <keybind key="W-m">
+            <keybind key="W-g">
                 <action name="Move" />
             </keybind>
 
@@ -460,7 +460,6 @@
                 </action>
             </keybind>
 
-			<!--
             <keybind key="A-space">
                 <action name="Execute">
                     <startupnotify>
@@ -470,7 +469,6 @@
                     <command>rofi -show drun</command>
                 </action>
             </keybind>
-			-->
 
             <!-- Other keybinds -->
 
@@ -489,25 +487,16 @@
                         <enabled>true</enabled>
                         <name>Dmenu</name>
                     </startupnotify>
-                    <command>rofi -show drun</command>
+                    <command>dmenu_run</command>
                 </action>
             </keybind>
             <keybind key="W-w">
                 <action name="Execute">
                     <startupnotify>
                         <enabled>true</enabled>
-                        <name>Rofi_window</name>
+                        <name>rofi</name>
                     </startupnotify>
                     <command>rofi -show window</command>
-                </action>
-            </keybind>
-            <keybind key="W-A-d">
-                <action name="Execute">
-                    <startupnotify>
-                        <enabled>true</enabled>
-                        <name>Morc_menu</name>
-                    </startupnotify>
-                    <command>morc_menu</command>
                 </action>
             </keybind>
             <keybind key="W-S-r">
