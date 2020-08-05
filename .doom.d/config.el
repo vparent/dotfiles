@@ -23,7 +23,7 @@
 ;;       doom-variable-pitch-font (font-spec :family "sans" :size 13))
 
 ;; Font setting
-;(setq doom-font (font-spec :family "JetBrains Nerd Font Mono" :size 12))
+(setq doom-font (font-spec :family "JetBrains Mono Nerd Font" :size 12))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
@@ -68,9 +68,11 @@
   (set-company-backend! 'sh-mode
     '(company-shell :with company-yasnippet)))
 
-;(after! cc-mode
-;  (set-company-backend! 'c-mode
-;    '(:separate company-irony-c-headers company-irony company-yasnippet)))
+(after! cc-mode
+  (set-company-backend! 'c-mode
+    '(:separate company-capf company-irony-c-headers company-irony company-yasnippet))
+  (set-company-backend! 'c++-mode
+    '(:separate company-capf company-irony-c-headers company-irony company-yasnippet)))
 
 (after! lsp-python-ms
   (set-lsp-priority! 'mspyls 1))
