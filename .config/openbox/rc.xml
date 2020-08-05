@@ -460,15 +460,11 @@
                 </action>
             </keybind>
 
-            <keybind key="A-space">
-                <action name="Execute">
-                    <startupnotify>
-                        <enabled>true</enabled>
-                        <name>Krunner</name>
-                    </startupnotify>
-                    <command>rofi -show drun</command>
-                </action>
-            </keybind>
+			<keybind key="W-e">
+				<action name="Execute">
+					<command>emacsclient -c</command>
+				</action>
+			</keybind>
 
             <!-- Other keybinds -->
 
@@ -538,7 +534,7 @@
                     <command>shutdown -h now</command>
                 </action>
             </keybind>
-            <keybind key="C-S-A-R">
+            <keybind key="C-S-A-r">
                 <action name="Execute">
                     <startupnotify>
                         <enabled>true</enabled>
@@ -560,11 +556,7 @@
             <!-- Volume control keybindings -->
             <keybind key="W-S-v">
                 <action name="Execute">
-                    <startupnotify>
-                        <enabled>true</enabled>
-                        <name>Pavucontrol</name>
-                    </startupnotify>
-                    <command>pavucontrol-qt</command>
+                    <command>alacritty -e pulsemixer</command>
                 </action>
             </keybind>
             <keybind key="XF86AudioRaiseVolume">
@@ -577,24 +569,6 @@
                 </action>
             </keybind>
             <keybind key="XF86AudioLowerVolume">
-                <action name="Execute">
-                    <startupnotify>
-                        <enabled>true</enabled>
-                        <name>Volume Down</name>
-                    </startupnotify>
-                    <command>pamixer -d 5</command>
-                </action>
-            </keybind>
-            <keybind key="M-F3">
-                <action name="Execute">
-                    <startupnotify>
-                        <enabled>true</enabled>
-                        <name>Volume Up</name>
-                    </startupnotify>
-                    <command>pamixer -i 5</command>
-                </action>
-            </keybind>
-            <keybind key="M-F2">
                 <action name="Execute">
                     <startupnotify>
                         <enabled>true</enabled>
@@ -664,7 +638,7 @@
                         <enabled>true</enabled>
                         <name>Screen Brightness Up</name>
                     </startupnotify>
-                    <command>$HOME/bin/backlight.sh -inc 50</command>
+                    <command>xbacklight -inc 5</command>
                 </action>
             </keybind>
             <keybind key="XF86MonBrightnessDown">
@@ -674,7 +648,7 @@
                         <name>Screen Brightness down
                     </name>
                 </startupnotify>
-                <command>$HOME/bin/backlight.sh -dec 50</command>
+                <command>xbacklight -dec 5</command>
             </action>
 
         </keybind>

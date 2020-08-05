@@ -63,3 +63,6 @@ end
 function npm
 	command npm -g --prefix=$HOME/.local $argv
 end
+function ec
+	command emacsclient -t $argv
+end

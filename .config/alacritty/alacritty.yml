@@ -97,8 +97,7 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    #family: JetBrains Mono Medium Nerd Font
-    family: Fura Code Nerd Font
+    family: JetBrains Mono Medium Nerd Font
 
     # The `style` can be specified to pick a specific face.
     style: Regular
@@ -109,7 +108,7 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Fura Code Nerd Font
+    family: JetBrains Mono Nerd Font
 
     # The `style` can be specified to pick a specific face.
     style: Bold
@@ -120,7 +119,7 @@ font:
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Fura Code Nerd Font
+    family: JetBrains Mono Nerd Font
 
     # The `style` can be specified to pick a specific face.
     style: Italic
@@ -131,7 +130,7 @@ font:
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Fura Code Nerd Font
+    family: JetBrains Mono Code Nerd Font
 
     # The `style` can be specified to pick a specific face.
     style: Bold Italic
@@ -279,7 +278,7 @@ font:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 0.85
+background_opacity: 0.92
 
 #selection:
   #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
