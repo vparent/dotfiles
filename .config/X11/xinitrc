@@ -44,10 +44,10 @@ feh --no-fehbg --bg-scale $(readlink $XDG_CONFIG_HOME/wallpaper) &
 $HOME/.local/bin/screen_layout.sh &
 dunst &
 
-if [ $1 = "openbox" ]; then
+if [ $2 = "openbox" ]; then
 	exec openbox-session
-elif [ $1 = "spectrwm" ]; then
+elif [ $2 = "spectrwm" ]; then
 	exec spectrwm
-elif [ $1 = "dwm" ]; then
+elif [ $2 = "dwm" ]; then
 	exec dwm
 fi
