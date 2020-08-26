@@ -29,6 +29,12 @@ end
 function rmf
 	command rm -rfI $argv
 end
+function vim
+	command vim -u $XDG_CONFIG_HOME/vim/vimrc $argv
+end
+function nvim
+	command nvim -u $XDG_CONFIG_HOME/vim/vimrc $argv
+end
 function view 
 	command vim -R -c "syntax on" $argv
 end
@@ -65,4 +71,7 @@ function npm
 end
 function ec
 	command emacsclient -t $argv
+end
+function dotfs
+	command git --git-dir=$HOME/.config/dotfiles/ --work-tree=$HOME $argv
 end

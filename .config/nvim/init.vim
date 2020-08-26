@@ -3,40 +3,41 @@ let &packpath = &runtimepath
 
 " Plug section {{{1 "
 call plug#begin('$XDG_CONFIG_HOME/vim/plugged')
-    Plug 'dense-analysis/ale'
+	Plug 'dense-analysis/ale'
 	Plug 'prabirshrestha/async.vim'
-    Plug 'jiangmiao/auto-pairs'
-    Plug 'scrooloose/nerdtree'
-    Plug 'scrooloose/nerdcommenter'
-    Plug 'Xuyuanp/nerdtree-git-plugin'
+	Plug 'jiangmiao/auto-pairs'
+	Plug 'scrooloose/nerdtree'
+	Plug 'scrooloose/nerdcommenter'
+	Plug 'Xuyuanp/nerdtree-git-plugin'
 	Plug 'sheerun/vim-polyglot'
-    Plug 'majutsushi/tagbar'
+	Plug 'majutsushi/tagbar'
 
-    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugin' }
+	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugin' }
 
 	" Deoplete sources {{{2 
-	 "Plug 'Shougo/deoplete-clangx'
-	 Plug 'Shougo/neco-vim'
-	 Plug 'Shougo/neoinclude.vim'
-	 Plug 'Shougo/neco-syntax'
-	 Plug 'Shougo/vimshell.vim'
-	 Plug 'deoplete-plugins/deoplete-jedi'
-	 Plug 'wellle/tmux-complete.vim'
-	 Plug 'php-vim/phpcd.vim', {'for': 'php', 'do': 'composer install'}
-	 Plug 'lighttiger2505/deoplete-vim-lsp'
+	"Plug 'Shougo/deoplete-clangx'
+	Plug 'Shougo/neco-vim'
+	Plug 'Shougo/neoinclude.vim'
+	Plug 'Shougo/neco-syntax'
+	Plug 'Shougo/vimshell.vim'
+	Plug 'deoplete-plugins/deoplete-jedi'
+	Plug 'wellle/tmux-complete.vim'
+	Plug 'php-vim/phpcd.vim', {'for': 'php', 'do': 'composer install'}
+	Plug 'lighttiger2505/deoplete-vim-lsp'
 	" 2}}} "
-	
+
 	Plug 'SirVer/ultisnips' 
 
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
-    Plug 'ryanoasis/vim-devicons'
-    Plug 'tpope/vim-fugitive'
-    Plug 'calviken/vim-gdscript3'
+	Plug 'vim-airline/vim-airline'
+	Plug 'vim-airline/vim-airline-themes'
+	Plug 'ryanoasis/vim-devicons'
+	Plug 'tpope/vim-fugitive'
+	Plug 'calviken/vim-gdscript3'
+	Plug 'vim-latex/vim-latex'
 	Plug 'prabirshrestha/vim-lsp'
 	Plug 'mattn/vim-lsp-settings'
 	Plug 'honza/vim-snippets'
-    Plug 'tpope/vim-surround'
+	Plug 'tpope/vim-surround'
 
 	Plug 'pearofducks/ansible-vim'
 call plug#end()
@@ -60,7 +61,7 @@ let g:deoplete#sources#jedi#enable_typeinfo = 1
 let auto_complete_delay = 500
 " deoplete settings}}} "
 " NerdTree config {{{ "
-	let g:NERDTreeShowIgnoredStatus = 1
+	let g:NERDTreeGitStatusShowIgnored = 1
 	map <Leader>t :NERDTreeToggle .<CR>
 	map <Leader>ts :NERDTreeToggle /<CR>
 	map <Leader>te :NERDTreeToggle /etc<CR>
