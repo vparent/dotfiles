@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 CONFIG_DIR=${XDG_CONFIG_HOME:-$HOME/.config}/X11
 userresources=$CONFIG_DIR/xresources
@@ -33,4 +33,4 @@ if [[ -d /etc/X11/xinit/nvidia-xinitrc.d ]] ; then
  unset f
 fi
 
-. $HOME/.config/X11/xinitrc $*
+. $XINITRC "" $1

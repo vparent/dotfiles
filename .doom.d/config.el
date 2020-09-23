@@ -28,7 +28,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-one)
+(setq doom-theme 'doom-vibrant)
 
 ; Set transparency for focused and unfocused frames
 (set-frame-parameter (selected-frame) 'alpha '(95 . 90))
@@ -76,5 +76,3 @@
 
 (after! lsp-python-ms
   (set-lsp-priority! 'mspyls 1))
-
-(setq +latex-viewers '(zathura))

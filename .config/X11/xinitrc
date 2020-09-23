@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
@@ -38,18 +38,20 @@ setxkbmap fr -variant latin9 -option "caps:escape" -option "terminate:ctrl_bksp"
 export QT_QPA_PLATFORMTHEME=qt5ct
 
 $HOME/.local/bin/screen_layout.sh &
-autocutsel -fork &
 autocutsel -selection PRIMARY -fork &
 picom > /dev/null 2> /dev/null &
 feh --no-fehbg --bg-scale $(readlink $XDG_CONFIG_HOME/wallpaper) &
 dunst &
 
-$XDG_CONFIG_HOME/polybar/launch.sh &
-
-if [ $2 = "openbox" ]; then
+if [[ $2 = "openbox" || $2 = "/usr/bin/openbox" ]]; then
+	$XDG_CONFIG_HOME/polybar/launch.sh openbox &
 	exec openbox-session
-elif [ $2 = "spectrwm" ]; then
+elif [[ $2 = "spectrwm" || $2 = "/usr/bin/spectrwm" ]]; then
 	exec spectrwm
-elif [ $2 = "dwm" ]; then
+elif [[ $2 = "dwm" ]]; then
 	exec dwm
 fi
+
+kill $(pgrep dunst)
+kill $(pgrep picom)
+kill $(pgrep autocutsel)
