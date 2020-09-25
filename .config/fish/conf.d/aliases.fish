@@ -57,13 +57,13 @@ function py
 	command python $argv
 end
 function d
-	command dirs -v $argv 
+	command dir -v $argv 
 end
 function src 
-	if test (pwd) = $HOME
+	if [[ (pwd) = $HOME ]]
 		cd .local/src
 	else
-		cd ./src
+		[[ -d ./src ]] && cd ./src
 	end
 end
 function npm
