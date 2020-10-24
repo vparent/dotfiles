@@ -5,6 +5,7 @@ SETUVAR --export EDITOR:vim
 SETUVAR --export GNUPGHOME:/home/vparent/\x2elocal/share/gnupg
 SETUVAR --export LESSHISTFILE:\x2d
 SETUVAR --export LESSKEY:/home/vparent/\x2econfig/less/lesskey
+SETUVAR MSBuildSDKsPath:/usr/share/dotnet/sdk/3\x2e1\x2e108/Sdks
 SETUVAR --path PATH:/home/vparent/\x2elocal/bin\x1e/usr/local/sbin\x1e/usr/local/bin\x1e/usr/bin\x1e/usr/bin/site_perl\x1e/usr/bin/vendor_perl\x1e/usr/bin/core_perl\x1e/home/vparent/\x2elocal/lib/node_modules/\x40angular/cli/bin
 SETUVAR PYTHONDONTWRITEBYTECODE:1
 SETUVAR --export RANDFILE:/home/vparent/\x2econfig/openssl/rand
