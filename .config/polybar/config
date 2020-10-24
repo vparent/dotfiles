@@ -17,16 +17,17 @@
 ;==========================================================
 
 [colors]
-background = ${xrdb:color0:#222}
-;background = #55222222
+;background = ${xrdb:color0:#222}
+background = #0F1418
 ;background-alt = #444
 ;foreground = ${xrdb:color7:#222}
 ;foreground = #efefef
-foreground = #efefef
+;foreground = #efefef
+foreground = #e6e7e7
 foreground-alt = #555
-primary = #ffb52a
-secondary = #e60053
-alert = #bd2c40
+primary = #0F1418
+secondary = #7D8185
+alert = #8D9093
 
 [bar/openbox]
 ;monitor = ${env:MONITOR:HDMI-1}
@@ -52,17 +53,17 @@ padding-right = 4
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = Fura Code Nerd Font:pixelsize=10;1
+font-0 = JetBrains Mono Nerd Font:pixelsize=10;1
 font-1 = unifont:fontformat=truetype:size=10:antialias=true;0
 font-2 = siji:pixelsize=10;1
 
 modules-left = filesystem wlan eth 
 modules-center = date
-modules-right = backlight-acpi alsa cpu memory xkeyboard battery temperature
+modules-right = xkeyboard alsa backlight-acpi cpu memory battery
 
 tray-position = right
 tray-padding = 4
-tray-background = #0063ff
+tray-background = ${colors.background}
 
 ;wm-restack = bspwm
 ;wm-restack = i3
@@ -161,11 +162,11 @@ type = internal/fs
 interval = 25
 
 mount-0 = /
-mount-1 = /home/vparent
+mount-1 = /home
 
 label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
 label-unmounted = %mountpoint% not mounted
-label-unmounted-foreground = ${colors.foreground-alt}
+label-unmounted-foreground = ${colors.foreground}
 
 [module/bspwm]
 type = internal/bspwm
@@ -265,12 +266,13 @@ output = eDP-1-1
 inherit = module/xbacklight
 type = internal/backlight
 card = intel_backlight
+enable-scroll = true
 
 [module/cpu]
 type = internal/cpu
 interval = 2
 format-prefix = ' '
-format-prefix-foreground = ${colors.foreground-alt}
+format-prefix-foreground = ${colors.foreground}
 format-underline = #f90000
 label = %percentage:2%%
 
@@ -288,7 +290,7 @@ interface = wlo1
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
-format-connected-underline = #9f78e1
+format-connected-underline = ${colors.alert}
 label-connected = %essid% %local_ip%
 
 format-disconnected =
@@ -302,16 +304,16 @@ ramp-signal-1 = 
 ramp-signal-2 = 
 ramp-signal-3 = 
 ramp-signal-4 = 
-ramp-signal-foreground = ${colors.foreground-alt}
+ramp-signal-foreground = ${colors.foreground}
 
 [module/eth]
 type = internal/network
 interface = enp3s0
 interval = 3.0
 
-format-connected-underline = #55aa55
-format-connected-prefix = " "
-format-connected-prefix-foreground = ${colors.foreground-alt}
+format-connected-underline = ${colors.alert}
+;format-connected-prefix = " "
+format-connected-prefix-foreground = ${colors.foreground}
 label-connected = %local_ip%
 
 format-disconnected =

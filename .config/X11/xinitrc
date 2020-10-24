@@ -40,9 +40,11 @@ export QT_QPA_PLATFORMTHEME=qt5ct
 $HOME/.local/bin/screen_layout.sh &
 autocutsel -selection PRIMARY -fork &
 picom > /dev/null 2> /dev/null &
-feh --no-fehbg --bg-scale $(readlink $XDG_CONFIG_HOME/wallpaper) &
+feh --no-fehbg --bg-scale ~/.config/wallpaper &
 dunst &
-[[ $(pgrep emacs) ]] && systemctl --user start emacs
+lxqt-policykit-agent &
+
+[[ ! $(pgrep emacs) ]] && systemctl --user start emacs
 
 if [[ $2 = "openbox" || $2 = "/usr/bin/openbox" ]]; then
 	$XDG_CONFIG_HOME/polybar/launch.sh openbox &

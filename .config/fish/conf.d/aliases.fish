@@ -60,10 +60,12 @@ function d
 	command dir -v $argv 
 end
 function src 
-	if [[ (pwd) = $HOME ]]
+	if test $PWD = $HOME
 		cd .local/src
 	else
-		[[ -d ./src ]] && cd ./src
+		if test -d ./src
+			cd ./src
+		end
 	end
 end
 function npm
@@ -74,4 +76,10 @@ function ec
 end
 function dotfs
 	command git --git-dir=$HOME/.config/dotfiles/ --work-tree=$HOME $argv
+end
+function gdb
+	command gdb -q $argv
+end
+function pwsh
+	/home/vparent/.dotnet/tools/pwsh $argv
 end

@@ -76,7 +76,7 @@ window:
   #
   # Override the variant of the GTK theme. Commonly supported values are `dark` and `light`.
   # Set this to `None` to use the default theme variant.
-  #gtk_theme_variant: None
+  gtk_theme_variant: dark
 
 #scrolling:
   # Maximum number of lines in the scrollback buffer.
@@ -172,6 +172,44 @@ font:
 #draw_bold_text_with_bright_colors: false
 
 # Colors (Tomorrow Night Bright)
+
+colors:
+  primary:
+    background: "#0F1418"
+    foreground: "#e6e7e7"
+
+    bright_background: "#0F1418"
+    dim_background: "#0F1418"
+    bright_foreground: "#e6e7e7"
+    dim_foreground: "#e6e7e7"
+  normal:
+    black: "#0F1418"
+    red: "#7D8185"
+    green: "#8D9093"
+    yellow: "#ACAFB1"
+    blue: "#BEC0C3"
+    magenta: "#D2D4D6"
+    cyan: "#DEE0E0"
+    white: "#e6e7e7"
+  bright:
+    black: "#0F1418"
+    red: "#7D8185"
+    green: "#8D9093"
+    yellow: "#ACAFB1"
+    blue: "#BEC0C3"
+    magenta: "#D2D4D6"
+    cyan: "#DEE0E0"
+    white: "#e6e7e7"
+  dim:
+    black: "#0F1418"
+    red: "#7D8185"
+    green: "#8D9093"
+    yellow: "#ACAFB1"
+    blue: "#BEC0C3"
+    magenta: "#D2D4D6"
+    cyan: "#DEE0E0"
+    white: "#e6e7e7"
+
 #colors:
   # Default colors
   #primary:
@@ -290,18 +328,18 @@ background_opacity: 0.92
 # Allow terminal applications to change Alacritty's window title.
 #dynamic_title: true
 
-#cursor:
+cursor:
   # Cursor style
   #
   # Values for `style`:
   #   - ▇ Block
   #   - _ Underline
   #   - | Beam
-  #style: Block
+  style: Beam
 
   # If this is `true`, the cursor will be rendered as a hollow box when the
   # window is not focused.
-  #unfocused_hollow: true
+  unfocused_hollow: true
 
 # Live config reload (changes require restart)
 #live_config_reload: true
@@ -501,11 +539,12 @@ background_opacity: 0.92
 #
 # If the same trigger is assigned to multiple actions, all of them are executed
 # at once.
-#key_bindings:
+key_bindings:
   # (Windows, Linux, and BSD only)
-  #- { key: V,        mods: Control|Shift, action: Paste            }
-  #- { key: C,        mods: Control|Shift, action: Copy             }
-  #- { key: Insert,   mods: Shift,         action: PasteSelection   }
+  - { key: V,        mods: Control|Shift, action: Paste            }
+  - { key: C,        mods: Control|Shift, action: Copy             }
+  - { key: Insert,   mods: Shift,         action: PasteSelection   }
+  - { key: Insert,   mods: Control,       action: CopySelection     }
   #- { key: Key0,     mods: Control,       action: ResetFontSize    }
   #- { key: Equals,   mods: Control,       action: IncreaseFontSize }
   #- { key: Add,      mods: Control,       action: IncreaseFontSize }
