@@ -250,9 +250,6 @@
 			</keybind>
 
 			<!-- Keybindings for windows -->
-			<keybind key="A-F4">
-				<action name="Close"/>
-			</keybind>
 			<keybind key="W-a">
 				<action name="Close"/>
 			</keybind>
@@ -268,6 +265,9 @@
 			</keybind>
 			<keybind key="W-f">
 				<action name="ToggleMaximize" />
+				<action name="Execute">
+					<command>polybar-msg cmd hide</command>
+				</action>
 			</keybind>
 			<keybind key="W-h">
 				<action name="Iconify" />
@@ -594,6 +594,11 @@
 					<command>playerctl play-pause</command>
 				</action>
 			</keybind>
+            <keybind key="A-F5">
+                <action name="Execute">
+                    <command>playerctl play-pause</command>
+                </action>
+            </keybind>
 			<keybind key="XF86AudioPause">
 				<action name="Execute">
 					<startupnotify>

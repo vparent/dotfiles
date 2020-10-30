@@ -17,216 +17,67 @@
 ;==========================================================
 
 [colors]
-;background = ${xrdb:color0:#222}
 background = #0F1418
-;background-alt = #444
-;foreground = ${xrdb:color7:#222}
-;foreground = #efefef
-;foreground = #efefef
+background-alt = #0F1418
 foreground = #e6e7e7
-foreground-alt = #555
+foreground-alt = #e6e7e7
 primary = #0F1418
 secondary = #7D8185
 alert = #8D9093
 
 [bar/openbox]
-;monitor = ${env:MONITOR:HDMI-1}
 width = 80%
 height = 20
 offset-x = 10%
 offset-y = 0%
-radius = 5.0
-fixed-center = true
-
-background = ${colors.background}
-foreground = ${colors.foreground}
-
-line-size = 4
-line-color = #f00
-
-border-size = 0
-border-color = #00000000
-
-padding-left = 4
-padding-right = 4
-
-module-margin-left = 1
-module-margin-right = 2
-
-font-0 = JetBrains Mono Nerd Font:pixelsize=10;1
-font-1 = unifont:fontformat=truetype:size=10:antialias=true;0
-font-2 = siji:pixelsize=10;1
-
-modules-left = filesystem wlan eth 
-modules-center = date
-modules-right = xkeyboard alsa backlight-acpi cpu memory battery
-
-tray-position = right
-tray-padding = 4
-tray-background = ${colors.background}
-
-;wm-restack = bspwm
-;wm-restack = i3
-
-override-redirect = true
-
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
-
-;scroll-up = i3wm-wsnext
-;scroll-down = i3wm-wsprev
-
-cursor-click = pointer
-cursor-scroll = ns-resize
-
-enable-ipc = true
-
-[bar/i3]
-;monitor = ${env:MONITOR:HDMI-1}
-width = 100%
-height = 18
-;offset-x = 15%
-;offset-y = 0%
 radius = 0.0
 fixed-center = true
 
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 1
-line-color = #f00
+line-size = 0
+line-color = #fff
 
 border-size = 0
-border-color = #00000000
+border-color = ${colors.foreground}
 
 padding-left = 0
-padding-right = 2
+padding-right = 0
 
 module-margin-left = 1
-module-margin-right = 2
+module-margin-right = 1
 
-font-0 = FuraCode Nerd Font:pixelsize=12;1
-font-1 = unifont:fontformat=truetype:size=12:antialias=false;0
-font-2 = siji:pixelsize=10;1
+font-0 = Tamsyn:pixelsize=11;0
+font-1 = Roboto:size=11:weight=bold:antialias=true;0
+font-2 = JetBrains Mono Nerd Font:pixelsize=11:antialias=true;0
 
-modules-left = xwindow filesystem wlan eth
+modules-left = ewmh filesystem wlan eth
 modules-center = date
-modules-right = pulseaudio cpu memory xkeyboard temperature powermenu 
+modules-right = alsa cpu memory temperature powermenu
 
 tray-position = right
-tray-padding = 2
-;tray-background = #0063ff
+tray-padding = 1
+tray-background = ${colors.background}
 
-;wm-restack = bspwm
-wm-restack = i3
-
-override-redirect = false
-
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
-
-scroll-up = i3wm-wsnext
-scroll-down = i3wm-wsprev
+override-redirect = true
+wm-restack = bspwm
 
 cursor-click = pointer
 cursor-scroll = ns-resize
 
 enable-ipc = true
 
-[module/xwindow]
-type = internal/xwindow
-label = %title%
-label-maxlen = 50
-
-label-empty = Empty
-
-[module/xkeyboard]
-type = internal/xkeyboard
-blacklist-0 = num lock
-blacklist-1 = caps lock
-
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-format-prefix-underline = ${colors.secondary}
-
-label-layout = %layout%
-label-layout-underline = ${colors.secondary}
-
-label-indicator-padding = 2
-label-indicator-margin = 1
-label-indicator-background = ${colors.secondary}
-label-indicator-underline = ${colors.secondary}
-
 [module/filesystem]
 type = internal/fs
-interval = 25
+interval = 3600
 
 mount-0 = /
 mount-1 = /home
 
-label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
-label-unmounted = %mountpoint% not mounted
+label-mounted = %{F#8D9093}%mountpoint%%{F-}: %percentage_used%%
+label-unmounted =
 label-unmounted-foreground = ${colors.foreground}
-
-[module/bspwm]
-type = internal/bspwm
-
-label-focused = %index%
-label-focused-background = ${colors.background-alt}
-label-focused-underline= ${colors.primary}
-label-focused-padding = 2
-
-label-occupied = %index%
-label-occupied-padding = 2
-
-label-urgent = %index%!
-label-urgent-background = ${colors.alert}
-label-urgent-padding = 2
-
-label-empty = %index%
-label-empty-foreground = ${colors.foreground-alt}
-label-empty-padding = 2
-
-; Separator in between workspaces
-; label-separator = |
-
-[module/i3]
-type = internal/i3
-format = <label-state> <label-mode>
-index-sort = true
-wrapping-scroll = false
-
-; Only show workspaces on the same output as the bar
-;pin-workspaces = true
-
-label-mode-padding = 2
-label-mode-foreground = #000
-label-mode-background = #000
-
-; focused = Active workspace on focused monitor
-label-focused = %index%
-label-focused-background = ${module/bspwm.label-focused-background}
-label-focused-underline = ${module/bspwm.label-focused-underline}
-label-focused-padding = ${module/bspwm.label-focused-padding}
-
-; unfocused = Inactive workspace on any monitor
-label-unfocused = %index%
-label-unfocused-padding = ${module/bspwm.label-occupied-padding}
-
-; visible = Active workspace on unfocused monitor
-label-visible = %index%
-label-visible-background = ${self.label-focused-background}
-label-visible-underline = ${self.label-focused-underline}
-label-visible-padding = ${self.label-focused-padding}
-
-; urgent = Workspace with urgency hint set
-label-urgent = %index%
-label-urgent-background = ${module/bspwm.label-urgent-background}
-label-urgent-padding = ${module/bspwm.label-urgent-padding}
-
-; Separator in between workspaces
-; label-separator = |
-
 
 [module/mpd]
 type = internal/mpd
@@ -271,18 +122,28 @@ enable-scroll = true
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = ' '
+format-prefix = "   "
 format-prefix-foreground = ${colors.foreground}
 format-underline = #f90000
-label = %percentage:2%%
+label = %percentage:3%%
 
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #4bffdc
-label = %percentage_used%%
+
+format = "<label> <bar-used>"
+
+label = "RAM %gb_used%/%gb_total%"
+
+bar-used-indicator =
+bar-used-width = 20
+bar-used-foreground-0 = #55aa55
+bar-used-foreground-1 = #557755
+bar-used-foreground-2 = #f5a70a
+bar-used-foreground-3 = #ff5555
+bar-used-fill = |
+bar-used-empty = |
+bar-used-empty-foreground = #444444
 
 [module/wlan]
 type = internal/network
@@ -428,22 +289,28 @@ animation-discharging-framerate = 750
 
 [module/temperature]
 type = internal/temperature
-thermal-zone = 0
-warn-temperature = 60
+
+interval = 0.5
+
+thermal-zone = 2
+
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input
+
+base-temperature = 20
+warn-temperature = 80
 
 format = <ramp> <label>
-format-underline = #f50a4d
 format-warn = <ramp> <label-warn>
-format-warn-underline = ${self.format-underline}
 
-label = %temperature-c%
-label-warn = %temperature-c%
-label-warn-foreground = ${colors.secondary}
+label = TEMP %temperature-c%
 
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
-ramp-foreground = ${colors.foreground-alt}
+label-warn = TEMP %temperature-c%
+label-warn-foreground = #f00
+
+ramp-0 =
+ramp-1 =
+ramp-2 =
+ramp-foreground = #55
 
 [module/powermenu]
 type = custom/menu
@@ -452,12 +319,12 @@ expand-right = true
 
 format-spacing = 1
 
-label-open = 
-label-open-foreground = ${colors.secondary}
-label-close =  cancel
-label-close-foreground = ${colors.secondary}
-label-separator = '\ue0b4'
-label-separator-foreground = ${colors.foreground-alt}
+label-open =  X
+label-open-foreground = ${colors.foreground}
+label-close = x cancel
+label-close-foreground = ${colors.foreground}
+label-separator = ' | '
+label-separator-foreground = ${colors.foreground}
 
 menu-0-0 = reboot
 menu-0-0-exec = menu-open-1
@@ -475,22 +342,50 @@ menu-2-1 = cancel
 menu-2-1-exec = menu-open-0
 
 [module/ewmh]
-type=internal/xworkspaces
+type = internal/xworkspaces
 
 pin-workspaces = true
-enable-click = false
-enable-scroll = false
+enable-click = true
+enable-scroll = true
+
+icon-0 = code;0
+icon-1 = office;1
+icon-2 = graphics;2
+icon-3 = mail;3
+icon-4 = web;4
+
+format = <label-state>
+label-monitor = %name%
+
+label-active = %icon% %name%
+label-active-foreground = #ffffff
+label-active-background = #3f3f3f
+label-active-underline = #fba922
+label-active-padding = 4
+
+label-occupied = %icon%
+label-occupied-underline = #555555
+
+label-urgent = %icon%
+label-urgent-foreground = #000000
+label-urgent-background = #bd2c40
+label-urgent-underline = #9b0a20
+label-urgent-padding = 4
+
+label-empty = %icon%
+label-empty-foreground = #55
+label-empty-padding = 2
 
 [settings]
 screenchange-reload = true
 ;compositing-background = xor
-compositing-background = screen
+;compositing-background = screen
 ;compositing-foreground = source
-compositing-border = over
-pseudo-transparency = true
+;compositing-border = over
+;pseudo-transparency = false
 
 [global/wm]
-margin-top = 5
-margin-bottom = 5
+margin-top = 0
+margin-bottom = 0
 
 ; vim:ft=dosini

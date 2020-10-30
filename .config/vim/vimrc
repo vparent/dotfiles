@@ -51,10 +51,13 @@ set hlsearch
 set clipboard=unnamedplus
 
 set tabstop=4
-set softtabstop=4
+"set softtabstop=4
 set shiftwidth=4
-set noexpandtab
+"set noexpandtab
 set showmatch
+
+set ruler
+set list
 
 set wildmenu
 set lazyredraw

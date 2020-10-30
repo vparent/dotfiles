@@ -9,7 +9,7 @@ SETUVAR MSBuildSDKsPath:/usr/share/dotnet/sdk/3\x2e1\x2e108/Sdks
 SETUVAR --path PATH:/home/vparent/\x2elocal/bin\x1e/usr/local/sbin\x1e/usr/local/bin\x1e/usr/bin\x1e/usr/bin/site_perl\x1e/usr/bin/vendor_perl\x1e/usr/bin/core_perl\x1e/home/vparent/\x2elocal/lib/node_modules/\x40angular/cli/bin
 SETUVAR PYTHONDONTWRITEBYTECODE:1
 SETUVAR --export RANDFILE:/home/vparent/\x2econfig/openssl/rand
-SETUVAR --export VK_ICD_FILENAMES:/usr/share/vulkan/icd\x2ed/amd_pro_icd64\x2ejson
+SETUVAR --export VK_ICD_FILENAMES:/usr/share/vulkan/icd\x2ed/radeon_icd\x2ex86_64\x2ejson
 SETUVAR --export WGETRC:/home/vparent/\x2econfig/wgetrc
 SETUVAR --export XAUTHORITY:/home/vparent/\x2ecache/Xauthority
 SETUVAR --export XINITRC:/home/vparent/\x2econfig/X11/xinitrc

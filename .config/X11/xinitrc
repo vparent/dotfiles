@@ -43,6 +43,7 @@ picom > /dev/null 2> /dev/null &
 feh --no-fehbg --bg-scale ~/.config/wallpaper &
 dunst &
 lxqt-policykit-agent &
+pcmanfm-qt &
 
 [[ ! $(pgrep emacs) ]] && systemctl --user start emacs
 
