@@ -28,7 +28,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-vibrant)
+(setq doom-theme 'doom-dark+)
 
 ; Set transparency for focused and unfocused frames
 (set-frame-parameter (selected-frame) 'alpha '(95 . 90))
@@ -66,13 +66,10 @@
 
 (after! sh-script
   (set-company-backend! 'sh-mode
-    '(company-shell :with company-yasnippet)))
+    '(company-shell :with company-yasnippet company-files)))
 
 (after! cc-mode
   (set-company-backend! 'c-mode
-    '(:separate company-capf company-irony-c-headers company-irony company-yasnippet))
+    '(:separate company-capf company-irony-c-headers company-irony company-yasnippet company-clang company-files))
   (set-company-backend! 'c++-mode
-    '(:separate company-capf company-irony-c-headers company-irony company-yasnippet)))
-
-(after! lsp-python-ms
-  (set-lsp-priority! 'mspyls 1))
+    '(:separate company-capf company-irony-c-headers company-irony company-yasnippet company-clang company-files)))

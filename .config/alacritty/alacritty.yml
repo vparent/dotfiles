@@ -1,5 +1,8 @@
 # Configuration for Alacritty, the GPU enhanced terminal emulator.
 
+import:
+  - /home/vparent/.config/alacritty/colors.yml
+
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
 # set by alacritty itself.
@@ -10,7 +13,7 @@ env:
   # each instance of Alacritty. If it is not present, alacritty will
   # check the local terminfo database and use `alacritty` if it is
   # available, otherwise `xterm-256color` is used.
-  TERM: alacritty
+  TERM: xterm-256color
 
 window:
   # Window dimensions (changes require restart)
@@ -49,7 +52,7 @@ window:
   # Values for `decorations` (macOS only):
   #     - transparent: Title bar, transparent background and title bar buttons
   #     - buttonless: Title bar, transparent background, but no title bar buttons
-  #decorations: full
+  decorations: full
 
   # Startup Mode (changes require restart)
   #
@@ -97,8 +100,7 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    #family: JetBrains Mono Medium Nerd Font
-    family: JetBrains Mono Nerd Font
+    family: JetBrains Mono Medium Nerd Font
 
     # The `style` can be specified to pick a specific face.
     style: Regular
@@ -137,7 +139,7 @@ font:
     style: Bold Italic
 
   # Point size
-  size: 7.0
+  size: 7.5
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -173,42 +175,42 @@ font:
 
 # Colors (Tomorrow Night Bright)
 
-colors:
-  primary:
-    background: "#0F1418"
-    foreground: "#e6e7e7"
+#colors:
+#  primary:
+#    background: "#0F1418"
+#    foreground: "#e6e7e7"
 
-    bright_background: "#0F1418"
-    dim_background: "#0F1418"
-    bright_foreground: "#e6e7e7"
-    dim_foreground: "#e6e7e7"
-  normal:
-    black: "#0F1418"
-    red: "#7D8185"
-    green: "#8D9093"
-    yellow: "#ACAFB1"
-    blue: "#BEC0C3"
-    magenta: "#D2D4D6"
-    cyan: "#DEE0E0"
-    white: "#e6e7e7"
-  bright:
-    black: "#0F1418"
-    red: "#7D8185"
-    green: "#8D9093"
-    yellow: "#ACAFB1"
-    blue: "#BEC0C3"
-    magenta: "#D2D4D6"
-    cyan: "#DEE0E0"
-    white: "#e6e7e7"
-  dim:
-    black: "#0F1418"
-    red: "#7D8185"
-    green: "#8D9093"
-    yellow: "#ACAFB1"
-    blue: "#BEC0C3"
-    magenta: "#D2D4D6"
-    cyan: "#DEE0E0"
-    white: "#e6e7e7"
+#    bright_background: "#0F1418"
+#    dim_background: "#0F1418"
+#    bright_foreground: "#e6e7e7"
+#    dim_foreground: "#e6e7e7"
+#  normal:
+#    black: "#0F1418"
+#    red: "#7D8185"
+#    green: "#8D9093"
+#    yellow: "#ACAFB1"
+#    blue: "#BEC0C3"
+#    magenta: "#D2D4D6"
+#    cyan: "#DEE0E0"
+#    white: "#e6e7e7"
+#  bright:
+#    black: "#0F1418"
+#    red: "#7D8185"
+#    green: "#8D9093"
+#    yellow: "#ACAFB1"
+#    blue: "#BEC0C3"
+#    magenta: "#D2D4D6"
+#    cyan: "#DEE0E0"
+#    white: "#e6e7e7"
+#  dim:
+#    black: "#0F1418"
+#    red: "#7D8185"
+#    green: "#8D9093"
+#    yellow: "#ACAFB1"
+#    blue: "#BEC0C3"
+#    magenta: "#D2D4D6"
+#    cyan: "#DEE0E0"
+#    white: "#e6e7e7"
 
 #colors:
   # Default colors
@@ -541,10 +543,8 @@ cursor:
 # at once.
 key_bindings:
   # (Windows, Linux, and BSD only)
-  - { key: V,        mods: Control|Shift, action: Paste            }
-  - { key: C,        mods: Control|Shift, action: Copy             }
-  - { key: Insert,   mods: Shift,         action: PasteSelection   }
-  - { key: Insert,   mods: Control,       action: CopySelection     }
+  - { key: Insert,   mods: Shift,         action: Paste            }
+  - { key: Insert,   mods: Control,       action: Copy              }
   #- { key: Key0,     mods: Control,       action: ResetFontSize    }
   #- { key: Equals,   mods: Control,       action: IncreaseFontSize }
   #- { key: Add,      mods: Control,       action: IncreaseFontSize }

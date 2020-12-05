@@ -2,12 +2,15 @@
 # VERSION: 3.0
 SETUVAR DOTNET_CLI_TELEMETRY_OPTOUT:1
 SETUVAR --export EDITOR:vim
+SETUVAR FZF_DEFAULT_OPTS:\x0a\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x2d\x2dcolor\x20fg\x3a7\x2cbg\x3a0\x2chl\x3a1\x2cfg\x2b\x3a232\x2cbg\x2b\x3a1\x2chl\x2b\x3a255\x0a\x20\x20\x20\x20\x2d\x2dcolor\x20info\x3a7\x2cprompt\x3a2\x2cspinner\x3a1\x2cpointer\x3a232\x2cmarker\x3a1\x0a
 SETUVAR --export GNUPGHOME:/home/vparent/\x2elocal/share/gnupg
 SETUVAR --export LESSHISTFILE:\x2d
 SETUVAR --export LESSKEY:/home/vparent/\x2econfig/less/lesskey
+SETUVAR LS_COLORS:\x3asu\x3d30\x3b41\x3aow\x3d30\x3b42\x3ast\x3d30\x3b44\x3a
 SETUVAR MSBuildSDKsPath:/usr/share/dotnet/sdk/3\x2e1\x2e108/Sdks
 SETUVAR --path PATH:/home/vparent/\x2elocal/bin\x1e/usr/local/sbin\x1e/usr/local/bin\x1e/usr/bin\x1e/usr/bin/site_perl\x1e/usr/bin/vendor_perl\x1e/usr/bin/core_perl\x1e/home/vparent/\x2elocal/lib/node_modules/\x40angular/cli/bin
 SETUVAR PYTHONDONTWRITEBYTECODE:1
+SETUVAR QT_QPA_PLATFORMTHEME:qt5ct
 SETUVAR --export RANDFILE:/home/vparent/\x2econfig/openssl/rand
 SETUVAR --export VK_ICD_FILENAMES:/usr/share/vulkan/icd\x2ed/radeon_icd\x2ex86_64\x2ejson
 SETUVAR --export WGETRC:/home/vparent/\x2econfig/wgetrc
@@ -15,6 +18,24 @@ SETUVAR --export XAUTHORITY:/home/vparent/\x2ecache/Xauthority
 SETUVAR --export XINITRC:/home/vparent/\x2econfig/X11/xinitrc
 SETUVAR --export XSERVERRC:/home/vparent/\x2econfig/X11/xserverrc
 SETUVAR __fish_initialized:3100
+SETUVAR background:\x230F0F26
+SETUVAR color0:\x230F0F26
+SETUVAR color1:\x233333AC
+SETUVAR color10:\x23636394
+SETUVAR color11:\x234646AF
+SETUVAR color12:\x233434C3
+SETUVAR color13:\x235353C6
+SETUVAR color14:\x239494BE
+SETUVAR color15:\x23e5e5f2
+SETUVAR color2:\x23636394
+SETUVAR color3:\x234646AF
+SETUVAR color4:\x233434C3
+SETUVAR color5:\x235353C6
+SETUVAR color6:\x239494BE
+SETUVAR color7:\x23e5e5f2
+SETUVAR color8:\x23a0a0a9
+SETUVAR color9:\x233333AC
+SETUVAR cursor:\x23e5e5f2
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:005fd7
@@ -45,3 +66,4 @@ SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_user_paths:/home/vparent/\x2elocal/bin
+SETUVAR foreground:\x23e5e5f2

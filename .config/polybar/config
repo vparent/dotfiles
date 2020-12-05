@@ -27,7 +27,7 @@ alert = #8D9093
 
 [bar/openbox]
 width = 80%
-height = 20
+height = 24
 offset-x = 10%
 offset-y = 0%
 radius = 0.0
@@ -48,13 +48,13 @@ padding-right = 0
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = Tamsyn:pixelsize=11;0
-font-1 = Roboto:size=11:weight=bold:antialias=true;0
-font-2 = JetBrains Mono Nerd Font:pixelsize=11:antialias=true;0
+font-0 = Tamsyn:pixelsize=12;0
+font-1 = Roboto:size=12:weight=bold:antialias=true;0
+font-2 = JetBrains Mono Medium Nerd Font:pixelsize=12:antialias=true;0
 
-modules-left = ewmh filesystem wlan eth
-modules-center = date
-modules-right = alsa cpu memory temperature powermenu
+modules-left = wlan eth
+modules-center =
+modules-right = cpu memory temperature date
 
 tray-position = right
 tray-padding = 1
@@ -73,24 +73,11 @@ type = internal/fs
 interval = 3600
 
 mount-0 = /
-mount-1 = /home
+mount-1 = /home/vparent
 
 label-mounted = %{F#8D9093}%mountpoint%%{F-}: %percentage_used%%
 label-unmounted =
 label-unmounted-foreground = ${colors.foreground}
-
-[module/mpd]
-type = internal/mpd
-format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
-
-icon-prev = 
-icon-stop = 
-icon-play = 
-icon-pause = 
-icon-next = 
-
-label-song-maxlen = 25
-label-song-ellipsis = true
 
 [module/xbacklight]
 type = internal/xbacklight
@@ -122,66 +109,50 @@ enable-scroll = true
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = "   "
+format-prefix = "  "
 format-prefix-foreground = ${colors.foreground}
-format-underline = #f90000
 label = %percentage:3%%
 
 [module/memory]
 type = internal/memory
 interval = 2
 
-format = "<label> <bar-used>"
+format = <label>
 
-label = "RAM %gb_used%/%gb_total%"
+label = "%gb_used%/%gb_total%"
 
-bar-used-indicator =
-bar-used-width = 20
-bar-used-foreground-0 = #55aa55
-bar-used-foreground-1 = #557755
-bar-used-foreground-2 = #f5a70a
-bar-used-foreground-3 = #ff5555
-bar-used-fill = |
-bar-used-empty = |
-bar-used-empty-foreground = #444444
+;bar-used-indicator =
+;bar-used-width = 5
+;bar-used-foreground-0 = #55aa55
+;bar-used-foreground-1 = #557755
+;bar-used-foreground-2 = #f5a70a
+;bar-used-foreground-3 = #ff5555
+;bar-used-fill = |
+;bar-used-empty = |
+;bar-used-empty-foreground = #444444
 
 [module/wlan]
 type = internal/network
-interface = wlo1
-interval = 3.0
+interface = wlan0
+interval = 60.0
 
-format-connected = <ramp-signal> <label-connected>
+format-connected =  <label-connected>
+format-connected-prefix = "  "
 format-connected-underline = ${colors.alert}
 label-connected = %essid% %local_ip%
 
 format-disconnected =
-;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
-
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
-ramp-signal-foreground = ${colors.foreground}
 
 [module/eth]
 type = internal/network
-interface = enp3s0
-interval = 3.0
+interface = br0
+interval = 60.0
 
-format-connected-underline = ${colors.alert}
-;format-connected-prefix = " "
+format-connected-prefix = " "
 format-connected-prefix-foreground = ${colors.foreground}
 label-connected = %local_ip%
 
 format-disconnected =
-;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
 
 [module/date]
 type = internal/date
@@ -297,20 +268,15 @@ thermal-zone = 2
 hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input
 
 base-temperature = 20
-warn-temperature = 80
+warn-temperature = 85
 
-format = <ramp> <label>
-format-warn = <ramp> <label-warn>
+format = <label>
+format-warn = <label-warn>
 
-label = TEMP %temperature-c%
+label = %temperature-c%
 
-label-warn = TEMP %temperature-c%
+label-warn = %temperature-c%
 label-warn-foreground = #f00
-
-ramp-0 =
-ramp-1 =
-ramp-2 =
-ramp-foreground = #55
 
 [module/powermenu]
 type = custom/menu
@@ -385,7 +351,7 @@ screenchange-reload = true
 ;pseudo-transparency = false
 
 [global/wm]
-margin-top = 0
+margin-top = 20
 margin-bottom = 0
 
 ; vim:ft=dosini

@@ -1,5 +1,7 @@
 runtime! archlinux.vim
 
+source $XDG_CONFIG_HOME/vim/colors.vim
+
 syntax on
 filetype on
 filetype indent on
