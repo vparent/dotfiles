@@ -38,7 +38,11 @@ fi
 
 if [[ $2 = "plasma" ]]; then
 	exec /usr/bin/startplasma-x11
+elif [[ $2 = "openbox-kde" ]]; then
+  /usr/bin/picom &
+  exec /usr/bin/openbox-kde-session
 else
+	setxkbmap fr -variant latin9 -option "caps:escape" -option "terminate:ctrl_bksp"
 	export QT_QPA_PLATFORMTHEME=qt5ct
 	$HOME/.local/bin/screen_layout.sh &
 	/usr/bin/autocutsel -selection PRIMARY -fork &
@@ -46,7 +50,7 @@ else
 	/usr/bin/feh --no-fehbg --bg-scale ~/.config/wallpaper &
 	/usr/bin/dunst &
 	/usr/bin/lxqt-policykit-agent &
-	/usr/bin/pcmanfm-qt -d &
+	/usr/bin/krunner -d
 	if [[ $2 = "openbox" || $2 = "/usr/bin/openbox" ]]; then
 	  $XDG_CONFIG_HOME/polybar/launch.sh openbox &
 	  exec /usr/bin/openbox

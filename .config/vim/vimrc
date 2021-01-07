@@ -1,6 +1,6 @@
 runtime! archlinux.vim
 
-source $XDG_CONFIG_HOME/vim/colors.vim
+"source $XDG_CONFIG_HOME/vim/colors.vim
 
 syntax on
 filetype on
@@ -46,7 +46,7 @@ set grepprg=grep\ -nH\ $*
 let g:tex_flavor = "latex"
 
 set backspace=indent,eol,start
-set ruler
+"set ruler
 set incsearch
 set hlsearch
 
@@ -57,9 +57,6 @@ set tabstop=4
 set shiftwidth=4
 "set noexpandtab
 set showmatch
-
-set ruler
-set list
 
 set wildmenu
 set lazyredraw

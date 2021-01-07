@@ -80,6 +80,6 @@ end
 function gdb
 	command gdb -q $argv
 end
-function pwsh
-	/home/vparent/.dotnet/tools/pwsh $argv
-end
+#function pwsh
+#	/home/vparent/.dotnet/tools/pwsh $argv
+#end

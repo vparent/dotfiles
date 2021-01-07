@@ -12,9 +12,12 @@ SETUVAR --path PATH:/home/vparent/\x2elocal/bin\x1e/usr/local/sbin\x1e/usr/local
 SETUVAR PYTHONDONTWRITEBYTECODE:1
 SETUVAR QT_QPA_PLATFORMTHEME:qt5ct
 SETUVAR --export RANDFILE:/home/vparent/\x2econfig/openssl/rand
-SETUVAR --export VK_ICD_FILENAMES:/usr/share/vulkan/icd\x2ed/radeon_icd\x2ex86_64\x2ejson
+SETUVAR --export VK_ICD_FILENAMES:/usr/share/vulkan/icd\x2ed/radeon_icd\x2ei686\x2ejson\x3a/usr/share/vulkan/icd\x2ed/radeon_icd\x2ex86_64\x2ejson
 SETUVAR --export WGETRC:/home/vparent/\x2econfig/wgetrc
 SETUVAR --export XAUTHORITY:/home/vparent/\x2ecache/Xauthority
+SETUVAR --export XDG_CACHE_HOME:/home/vparent/\x2ecache
+SETUVAR --export XDG_CONFIG_HOME:/home/vparent/\x2econfig/
+SETUVAR --export XDG_DATA_HOME:/home/vparent/\x2elocal/share
 SETUVAR --export XINITRC:/home/vparent/\x2econfig/X11/xinitrc
 SETUVAR --export XSERVERRC:/home/vparent/\x2econfig/X11/xserverrc
 SETUVAR __fish_initialized:3100

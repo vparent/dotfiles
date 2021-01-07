@@ -493,6 +493,11 @@
 					<command>dmenu_run -p " " -nb "#0F0F26" -nf "#e5e5f2" -sb "#3333AC" -sf "#e5e5f2" -fn "JetBrains Medium Nerd Fonts"</command>
 				</action>
 			</keybind>
+            <keybind key="A-Space">
+                <action name="Execute">
+                    <command>krunner</command>
+                </action>
+            </keybind>
 			<keybind key="W-w">
 				<action name="Execute">
 					<startupnotify>

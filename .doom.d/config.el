@@ -68,8 +68,5 @@
   (set-company-backend! 'sh-mode
     '(company-shell :with company-yasnippet company-files)))
 
-(after! cc-mode
-  (set-company-backend! 'c-mode
-    '(:separate company-capf company-irony-c-headers company-irony company-yasnippet company-clang company-files))
-  (set-company-backend! 'c++-mode
-    '(:separate company-capf company-irony-c-headers company-irony company-yasnippet company-clang company-files)))
+(set-eglot-client! 'cc-mode '("clangd" "-j=3" "--clang-tidy" "--completion-style=detailed"))
+(set-eglot-client! 'c++-mode '("clangd" "-j=3" "--clang-tidy" "--completion-style=detailed"))
