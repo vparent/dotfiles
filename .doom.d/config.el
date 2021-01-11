@@ -23,7 +23,7 @@
 ;;       doom-variable-pitch-font (font-spec :family "sans" :size 13))
 
 ;; Font setting
-(setq doom-font (font-spec :family "JetBrains Mono Nerd Font" :size 12))
+(setq doom-font (font-spec :family "JetBrains Mono Nerd Font" :size 14))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
@@ -62,11 +62,17 @@
 
 (setq message-kill-buffer-on-exit t)
 
-(setq rustic-lsp-server 'rust-analyser)
-
 (after! sh-script
   (set-company-backend! 'sh-mode
     '(company-shell :with company-yasnippet company-files)))
 
-(set-eglot-client! 'cc-mode '("clangd" "-j=3" "--clang-tidy" "--completion-style=detailed"))
-(set-eglot-client! 'c++-mode '("clangd" "-j=3" "--clang-tidy" "--completion-style=detailed"))
+(after! c-mode
+  (set-eglot-client! 'cc-mode '("clangd" "-j=3" "--clang-tidy" "--completion-style=detailed")))
+(after! c++-mode
+  (set-eglot-client! 'c++-mode '("clangd" "-j=3" "--clang-tidy" "--completion-style=detailed")))
+
+(after! rustic
+  (setq rustic-lsp-server 'rls))
+
+(after! markdown-mode
+  (setq markdown-command "pandoc -o /tmp/doc.pdf"))
