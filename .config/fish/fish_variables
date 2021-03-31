@@ -1,5 +1,7 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR DISTCC_DIR:/tmp/distcc
+SETUVAR DISTCC_HOSTS:
 SETUVAR DOTNET_CLI_TELEMETRY_OPTOUT:1
 SETUVAR --export EDITOR:vim
 SETUVAR FZF_DEFAULT_OPTS:\x0a\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x2d\x2dcolor\x20fg\x3a7\x2cbg\x3a0\x2chl\x3a1\x2cfg\x2b\x3a232\x2cbg\x2b\x3a1\x2chl\x2b\x3a255\x0a\x20\x20\x20\x20\x2d\x2dcolor\x20info\x3a7\x2cprompt\x3a2\x2cspinner\x3a1\x2cpointer\x3a232\x2cmarker\x3a1\x0a
@@ -63,7 +65,7 @@ SETUVAR fish_color_status:red
 SETUVAR fish_color_user:brgreen
 SETUVAR fish_color_valid_path:\x2d\x2dunderline
 SETUVAR fish_greeting:\x1d
-SETUVAR fish_key_bindings:fish_default_key_bindings
+SETUVAR fish_key_bindings:fish_vi_key_bindings
 SETUVAR fish_pager_color_completion:\x1d
 SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline

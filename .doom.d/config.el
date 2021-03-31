@@ -23,12 +23,22 @@
 ;;       doom-variable-pitch-font (font-spec :family "sans" :size 13))
 
 ;; Font setting
-(setq doom-font (font-spec :family "JetBrains Mono Nerd Font" :size 14))
+(setq doom-font (font-spec :family "JetBrainsMono" :size 14)
+      doom-variable-pitch-font (font-spec :family "JetBrainsMono" :size 15)
+      doom-big-font (font-spec :family "JetBrainsMono" :size 24))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
 (setq doom-theme 'doom-dark+)
+
+(after! doom-theme
+  (setq doom-themes-enable-bold t
+        doom-themes-enable-italic t))
+
+(custom-set-faces!
+  '(font-lock-comment-face :slant italic)
+  '(font-lock-keyword-face :slant italic))
 
 ; Set transparency for focused and unfocused frames
 (set-frame-parameter (selected-frame) 'alpha '(95 . 90))
@@ -66,13 +76,20 @@
   (set-company-backend! 'sh-mode
     '(company-shell :with company-yasnippet company-files)))
 
-(after! c-mode
+(after! 'cc-mode
   (set-eglot-client! 'cc-mode '("clangd" "-j=3" "--clang-tidy" "--completion-style=detailed")))
-(after! c++-mode
+
+(after! 'c++-mode
   (set-eglot-client! 'c++-mode '("clangd" "-j=3" "--clang-tidy" "--completion-style=detailed")))
+
 
 (after! rustic
   (setq rustic-lsp-server 'rls))
 
 (after! markdown-mode
   (setq markdown-command "pandoc -o /tmp/doc.pdf"))
+
+(add-hook! 'org-mode-hook 'org-superstar-mode)
+
+(after! org-mode
+  global-set-key (kbd "C-x p i") 'org-cliplink)

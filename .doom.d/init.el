@@ -127,10 +127,10 @@
        gdscript          ; the language you waited for
        ;;(go +lsp)         ; the hipster dialect
        ;;(haskell +dante)  ; a language that's lazier than I am
-       hy                ; readability of scheme w/ speed of python
+       ;;hy                ; readability of scheme w/ speed of python
        ;;idris             ;
        json              ; At least it ain't XML
-       (java +lsp) ; the poster child for carpal tunnel syndrome
+       ;;(java +lsp) ; the poster child for carpal tunnel syndrome
        javascript        ; all(hope(abandon(ye(who(enter(here))))))
        ;;julia             ; a better, faster MATLAB
        ;;kotlin            ; a better, slicker Java(Script)
@@ -147,17 +147,22 @@
             +org-evil
             +org-pdftools
             +ox-pandoc
-            +org-superstar
-            +org-fancy-priorities
             +org-noter
+            +org-pretty
             +ob-ipython
             +ob-rust
-            +evil-org)               ; organize your plain life in plain text
-       php               ; perl's insecure younger brother
+            +evil-org
+            +dragndrop
+            +journal
+            +pandoc
+            +present
+            +pretty
+            +org-cliplink
+            +org-yt)               ; organize your plain life in plain text
+       ;;php               ; perl's insecure younger brother
        ;;plantuml          ; diagrams for confusing people more
        ;;purescript        ; javascript, but functional
-       (python +lsp
-               +poetry)    ; beautiful is better than ugly
+       (python +lsp)    ; beautiful is better than ugly
        qt                ; the 'cutest' gui framework ever
        racket            ; a DSL for DSLs
        ;;raku              ; the artist formerly known as perl6

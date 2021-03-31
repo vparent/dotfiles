@@ -15,12 +15,12 @@
 #
 #xfce-mcs-manager &
 
-export QT_QPA_PLATFORMTHEME="qt5ct"
-$HOME/.local/bin/screen_layout.sh &
-/bin/autocutsel -selection PRIMARY -fork &
-/bin/picom > /dev/null 2> /dev/null &
-/bin/feh --no-fehbg --bg-scale ~/.config/wallpaper &
-/bin/dunst &
-/bin/lxqt-policykit-agent &
-/bin/pcmanfm-qt -d &
-$HOME/.config/polybar/launch.sh openbox &
+#export QT_QPA_PLATFORMTHEME="qt5ct"
+#$HOME/.local/bin/screen_layout.sh &
+#/bin/autocutsel -selection PRIMARY -fork &
+#/bin/picom > /dev/null 2> /dev/null &
+#/bin/feh --no-fehbg --bg-scale ~/.config/wallpaper &
+#/bin/dunst &
+#/bin/lxqt-policykit-agent &
+#/bin/pcmanfm-qt -d &
+#$HOME/.config/polybar/launch.sh openbox &

@@ -99,7 +99,7 @@ let g:ale_fixers= {
             \}
 
 let g:ale_linters_explicit=0
-let g:ale_c_gcc_options='-std=c90 -Wall -W -Wextra -pedantic'
+let g:ale_c_gcc_options='-std=c89 -Wall -W -Wextra -pedantic'
 let g:ale_set_balloons=1
 nmap <silent> <C-k> <Plug>{ale_previous_wrap}
 nmap <silent> <C-j> <Plug>{ale_next_wrap}

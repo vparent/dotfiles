@@ -52,7 +52,7 @@ window:
   # Values for `decorations` (macOS only):
   #     - transparent: Title bar, transparent background and title bar buttons
   #     - buttonless: Title bar, transparent background, but no title bar buttons
-  decorations: full
+  decorations: none
 
   # Startup Mode (changes require restart)
   #
@@ -100,7 +100,8 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: JetBrains Mono Medium Nerd Font
+    family: JetBrainsMono 
+    #family: NotoSans Mono Nerd Font
 
     # The `style` can be specified to pick a specific face.
     style: Regular
@@ -111,7 +112,8 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: JetBrains Mono Nerd Font
+    family: JetBrainsMono
+    #family: NotoSans Mono Nerd Font
 
     # The `style` can be specified to pick a specific face.
     style: Bold
@@ -122,7 +124,8 @@ font:
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: JetBrains Mono Nerd Font
+    family: JetBrainsMono
+    #family: NotoSans Mono Nerd Font
 
     # The `style` can be specified to pick a specific face.
     style: Italic
@@ -133,13 +136,14 @@ font:
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: JetBrains Mono Nerd Font
+    family: JetBrainsMono
+    #family: NotoSans Mono Nerd Font
 
     # The `style` can be specified to pick a specific face.
     style: Bold Italic
 
   # Point size
-  size: 7.5
+  size: 10
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -355,10 +359,10 @@ cursor:
 #   - (macOS) /bin/bash --login
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
-#shell:
-#  program: /bin/bash
-#  args:
-#    - --login
+shell:
+  program: /bin/fish
+  args:
+    - --login
 
 # Startup directory
 #
@@ -542,8 +546,9 @@ cursor:
 # If the same trigger is assigned to multiple actions, all of them are executed
 # at once.
 key_bindings:
+  - { key: Return,  mods: Control|Shift,  action: SpawnNewInstance  }
   # (Windows, Linux, and BSD only)
-  - { key: Insert,   mods: Shift,         action: Paste            }
+  - { key: Insert,   mods: Shift,         action: Paste             }
   - { key: Insert,   mods: Control,       action: Copy              }
   #- { key: Key0,     mods: Control,       action: ResetFontSize    }
   #- { key: Equals,   mods: Control,       action: IncreaseFontSize }
