@@ -2,14 +2,12 @@
 # VERSION: 3.0
 SETUVAR DISTCC_DIR:/tmp/distcc
 SETUVAR DISTCC_HOSTS:
-SETUVAR DOTNET_CLI_TELEMETRY_OPTOUT:1
 SETUVAR --export EDITOR:vim
 SETUVAR FZF_DEFAULT_OPTS:\x0a\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x2d\x2dcolor\x20fg\x3a7\x2cbg\x3a0\x2chl\x3a1\x2cfg\x2b\x3a232\x2cbg\x2b\x3a1\x2chl\x2b\x3a255\x0a\x20\x20\x20\x20\x2d\x2dcolor\x20info\x3a7\x2cprompt\x3a2\x2cspinner\x3a1\x2cpointer\x3a232\x2cmarker\x3a1\x0a
 SETUVAR --export GNUPGHOME:/home/vparent/\x2elocal/share/gnupg
 SETUVAR --export LESSHISTFILE:\x2d
 SETUVAR --export LESSKEY:/home/vparent/\x2econfig/less/lesskey
 SETUVAR LS_COLORS:\x3asu\x3d30\x3b41\x3aow\x3d30\x3b42\x3ast\x3d30\x3b44\x3a
-SETUVAR MSBuildSDKsPath:/usr/share/dotnet/sdk/3\x2e1\x2e108/Sdks
 SETUVAR --path PATH:/home/vparent/\x2elocal/bin\x1e/usr/local/sbin\x1e/usr/local/bin\x1e/usr/bin\x1e/usr/bin/site_perl\x1e/usr/bin/vendor_perl\x1e/usr/bin/core_perl\x1e/home/vparent/\x2elocal/lib/node_modules/\x40angular/cli/bin
 SETUVAR PYTHONDONTWRITEBYTECODE:1
 SETUVAR QT_QPA_PLATFORMTHEME:qt5ct
