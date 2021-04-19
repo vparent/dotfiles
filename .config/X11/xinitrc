@@ -43,6 +43,7 @@ elif [[ "$2" = "openbox-kde" ]]; then
 else
 	setxkbmap fr -variant latin9 -option "caps:escape" -option "terminate:ctrl_bksp"
 	export QT_QPA_PLATFORMTHEME=qt5ct
+	export MOZ_X11_EGL=1
 	$HOME/.local/bin/screen_layout.sh &
 	/usr/bin/autocutsel -selection PRIMARY -fork &
 	/usr/bin/picom > /dev/null 2> /dev/null &
