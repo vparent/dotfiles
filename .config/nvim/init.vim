@@ -40,6 +40,8 @@ call plug#begin('$XDG_CONFIG_HOME/vim/plugged')
 	Plug 'tpope/vim-surround'
 
 	Plug 'pearofducks/ansible-vim'
+
+	Plug 'vlime/vlime', {'rtp': 'vim/'}
 call plug#end()
 " 1}}} "
 " Airline config {{{ "
