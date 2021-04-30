@@ -268,15 +268,9 @@
 			</keybind>
 			<keybind key="W-f">
 				<action name="ToggleMaximize" />
-				<action name="Execute">
-					<command>polybar-msg cmd hide</command>
-				</action>
 			</keybind>
 			<keybind key="W-Prior">
 				<action name="ToggleMaximize" />
-				<action name="Execute">
-					<command>polybar-msg cmd hide</command>
-				</action>
 			</keybind>
 			<keybind key="W-Next">
 				<action name="Iconify" />
