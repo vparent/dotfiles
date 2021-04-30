@@ -50,10 +50,12 @@ else
 	/usr/bin/feh --no-fehbg --bg-scale ~/.config/wallpaper &
 	/usr/bin/dunst &
 	/usr/bin/lxqt-policykit-agent &
-	#/usr/bin/krunner -d &
-	#/usr/bin/dolphin --daemon &
+	/usr/bin/krunner -d &
+	/usr/bin/dolphin --daemon &
 	if [[ "$2" = "openbox" || "$2" = "/usr/bin/openbox" ]]; then
 	  $XDG_CONFIG_HOME/polybar/launch.sh openbox &
+	  xdotool search --class polybar behave_screen_edge top windownmap &
+	  xdotool search --class polybar behave_screen_edge bottom windowmap &
 	  exec /usr/bin/openbox
 	elif [[ "$2" = "spectrwm" || "$2" = "/usr/bin/spectrwm" ]]; then
 	  exec /usr/bin/spectrwm
