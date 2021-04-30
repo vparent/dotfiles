@@ -69,12 +69,12 @@
 		</item>
 		<item label="Office Suite">
 			<action name="Execute">
-				<command>loffice -base</command>
+				<command>loffice</command>
 			</action>
 		</item>
 		<item label="Video player">
 			<action name="Execute">
-				<command>vlc</command>
+				<command>mpv --player-operation-mode=pseudo-gui</command>
 			</action>
 		</item>
 		<separator label="System" />
