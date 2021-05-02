@@ -53,9 +53,7 @@ else
 	/usr/bin/krunner -d &
 	/usr/bin/dolphin --daemon &
 	if [[ "$2" = "openbox" || "$2" = "/usr/bin/openbox" ]]; then
-	  $XDG_CONFIG_HOME/polybar/launch.sh openbox &
-	  xdotool search --class polybar behave_screen_edge top windownmap &
-	  xdotool search --class polybar behave_screen_edge bottom windowmap &
+	  $XDG_CONFIG_HOME/polybar/launch.sh openbox
 	  exec /usr/bin/openbox
 	elif [[ "$2" = "spectrwm" || "$2" = "/usr/bin/spectrwm" ]]; then
 	  exec /usr/bin/spectrwm
