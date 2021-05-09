@@ -547,7 +547,7 @@
 						<enabled>true</enabled>
 						<name>Lock</name>
 					</startupnotify>
-					<command>i3lock -i readlink ~/.config/lockscreen --tiling</command>
+					<command>i3lock -i ~/.config/lockscreen -k --tiling --timecolor=eeeeeeee --datecolor=cccccccc</command>
 				</action>
 			</keybind>
 			<keybind key="C-S-A-Down">

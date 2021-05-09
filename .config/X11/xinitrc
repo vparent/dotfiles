@@ -45,13 +45,16 @@ else
 	export QT_QPA_PLATFORMTHEME=qt5ct
 	export MOZ_X11_EGL=1
 	$HOME/.local/bin/screen_layout.sh &
-	/usr/bin/autocutsel -selection PRIMARY -fork &
+	#/usr/bin/autocutsel -selection PRIMARY -fork &
 	/usr/bin/picom > /dev/null 2> /dev/null &
 	/usr/bin/feh --no-fehbg --bg-scale ~/.config/wallpaper &
 	/usr/bin/dunst &
 	/usr/bin/lxqt-policykit-agent &
 	/usr/bin/krunner -d &
 	/usr/bin/dolphin --daemon &
+	/usr/bin/klipper &
+	/usr/bin/xautolock -time 5 -locker "i3lock -i ~/.config/lockscreen -k --tiling --timecolor=eeeeeeee
+	--datecolor=cccccccc" --detectsleep
 	if [[ "$2" = "openbox" || "$2" = "/usr/bin/openbox" ]]; then
 	  $XDG_CONFIG_HOME/polybar/launch.sh openbox
 	  exec /usr/bin/openbox
