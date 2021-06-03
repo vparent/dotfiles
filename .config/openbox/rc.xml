@@ -462,9 +462,9 @@
 				<action name="Execute">
 					<startupnotify>
 						<enabled>true</enabled>
-						<name>Firefox</name>
+						<name>Web browser</name>
 					</startupnotify>
-					<command>firefox</command>
+					<command>chromium</command>
 				</action>
 			</keybind>
 
@@ -547,7 +547,7 @@
 						<enabled>true</enabled>
 						<name>Lock</name>
 					</startupnotify>
-                    <command>i3lock -i ~/.config/lockscreen -k --tiling --insidecolor=0000001c --ringcolor=0000003e --timecolor=eeeeeeee --datecolor=cccccccc</command>
+                    <command>i3lock -i ~/.config/lockscreen -k --tiling --inside-color=0000001c --ring-color=0000003e --time-color=eeeeeeff --date-color=ccccccff</command>
 				</action>
 			</keybind>
 			<keybind key="C-S-A-Down">

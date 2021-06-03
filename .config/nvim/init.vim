@@ -50,8 +50,8 @@ let g:airline_powerline_fonts=1
 let g:airline_solarized_bg='dark'
 let g:airline_detect_paste=1
 let g:airline#extensions#ale#enabled=1
-let g:airline_right_sep = "\ue0b6"
-let g:airline_left_sep = "\ue0b4"
+"let g:airline_right_sep = "\ue0b6"
+"let g:airline_left_sep = "\ue0b4"
 " }}} Airline config "
 " deoplete settings {{{1 "
 let g:deoplete#enable_at_startup = 1

@@ -30,7 +30,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-dark+)
+(setq doom-theme 'deeper-blue)
 
 (after! doom-theme
   (setq doom-themes-enable-bold t
@@ -93,3 +93,5 @@
 
 (after! org-mode
   global-set-key (kbd "C-x p i") 'org-cliplink)
+
+(setq inferior-lisp-program "sbcl")
