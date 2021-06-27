@@ -53,7 +53,7 @@ else
 	/usr/bin/krunner -d &
 	/usr/bin/dolphin --daemon &
 	/usr/bin/klipper &
-	/usr/bin/xautolock -time 5 -locker "i3lock -i ~/.config/lockscreen -k --tiling --time-color=eeeeeeff
+	/usr/bin/xautolock -time 30 -locker "i3lock -i ~/.config/lockscreen -k --tiling --time-color=eeeeeeff
 	--date-color=ccccccff" -detectsleep &
 	if [[ "$2" = "openbox" || "$2" = "/usr/bin/openbox" ]]; then
 	  $XDG_CONFIG_HOME/polybar/launch.sh openbox

@@ -83,6 +83,11 @@
                 <prompt>yes</prompt>
             </action>
         </item>
+		<item label="Lock">
+			<action name="Execute">
+				<command>i3lock -i ~/.config/lockscreen -k --tiling --inside-color=0000001c --ring-color=0000003e --time-color=eeeeeeff --date-color=ccccccff</command>
+			</action>
+		</item>
     </menu>
 
 </openbox_menu>
