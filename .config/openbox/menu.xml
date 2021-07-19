@@ -1,93 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <openbox_menu xmlns="http://openbox.org/3.4/menu">
-
-
-
-
-    <menu id="system-menu" label="System">
-        <item label="Openbox Configuration Manager">
-            <action name="Execute">
-                <command>obconf</command>
-                <startupnotify><enabled>yes</enabled></startupnotify>
-            </action>
-        </item>
-        <separator />
-        <item label="Reconfigure Openbox">
-            <action name="Reconfigure" />
-        </item>
-    </menu>
-
-    <menu id="root-menu" label="Openbox 3">
-		<item label="Web navigator">
-			<action name="Execute">
-				<command>firefox</command>
-				<startupnotify>
-					<enabled>yes</enabled>
-					<wmclass>Firefox</wmclass>
-				</startupnotify>
-			</action>
-		</item>
-		<item label="Terminal">
-			<action name="Execute">
-				<command>kitty</command>
-				<startupnotify>
-					<enabled>yes</enabled>
-				</startupnotify>
-			</action>
-		</item>
-		<item label="Tmux session">
-			<action name="Execute">
-				<command>kitty -e "tmux"</command>
-				<startupnotify>
-					<enabled>yes</enabled>
-				</startupnotify>
-			</action>
-		</item>
-		<item label="Editor">
-			<action name="Execute">
-				<command>emacsclient -c</command>
-				<startupnotify>
-					<enabled>yes</enabled>
-				</startupnotify>
-			</action>
-		</item>
-		<item label="File Manager">
-			<action name="Execute">
-				<command>dolphin</command>
-				<startupnotify>
-					<enabled>yes</enabled>
-				</startupnotify>
-			</action>
-		</item>
-		<item label="Archive manager">
-			<action name="Execute">
-				<command>ark</command>
-				<startupnotify> <enabled>yes</enabled>
-				</startupnotify>
-			</action>
-		</item>
-		<item label="Office Suite">
-			<action name="Execute">
-				<command>loffice</command>
-			</action>
-		</item>
-		<item label="Video player">
-			<action name="Execute">
-				<command>mpv --player-operation-mode=pseudo-gui</command>
-			</action>
-		</item>
-		<separator label="System" />
-        <item label="Log Out">
-            <action name="Exit">
-                <prompt>yes</prompt>
-            </action>
-        </item>
-		<item label="Lock">
-			<action name="Execute">
-				<command>i3lock -i ~/.config/lockscreen -k --tiling --inside-color=0000001c --ring-color=0000003e --time-color=eeeeeeff --date-color=ccccccff</command>
-			</action>
-		</item>
-    </menu>
-
+  <menu id="system-menu" label="System">
+    <item label="Openbox Configuration Manager">
+      <action name="Execute">
+        <command>obconf</command>
+        <startupnotify>
+          <enabled>yes</enabled>
+        </startupnotify>
+      </action>
+    </item>
+    <separator/>
+    <item label="Reconfigure Openbox">
+      <action name="Reconfigure"/>
+    </item>
+  </menu>
+  <menu id="root-menu" label="Openbox 3">
+    <item label="Web navigator">
+      <action name="Execute">
+        <command>chromium</command>
+        <startupnotify>
+          <enabled>yes</enabled>
+          <wmclass>Firefox</wmclass>
+        </startupnotify>
+      </action>
+    </item>
+    <item label="Terminal">
+      <action name="Execute">
+        <command>kitty</command>
+        <startupnotify>
+          <enabled>yes</enabled>
+        </startupnotify>
+      </action>
+    </item>
+    <item label="Tmux session">
+      <action name="Execute">
+        <command>kitty -e "tmux"</command>
+        <startupnotify>
+          <enabled>yes</enabled>
+        </startupnotify>
+      </action>
+    </item>
+    <item label="Editor">
+      <action name="Execute">
+        <command>emacsclient -c</command>
+        <startupnotify>
+          <enabled>yes</enabled>
+        </startupnotify>
+      </action>
+    </item>
+    <item label="File Manager">
+      <action name="Execute">
+        <command>dolphin</command>
+        <startupnotify>
+          <enabled>yes</enabled>
+        </startupnotify>
+      </action>
+    </item>
+    <item label="Archive manager">
+      <action name="Execute">
+        <command>ark</command>
+        <startupnotify>
+          <enabled>yes</enabled>
+        </startupnotify>
+      </action>
+    </item>
+    <item label="Office Suite">
+      <action name="Execute">
+        <command>loffice</command>
+      </action>
+    </item>
+    <item label="Video player">
+      <action name="Execute">
+        <command>mpv --player-operation-mode=pseudo-gui</command>
+      </action>
+    </item>
+    <separator label="System"/>
+    <item label="Log Out">
+      <action name="Exit">
+        <prompt>yes</prompt>
+      </action>
+    </item>
+    <item label="Lock">
+      <action name="Execute">
+        <command>i3lock -i ~/.config/lockscreen -k --tiling --inside-color=0000001c --ring-color=0000003e --time-color=eeeeeeff --date-color=ccccccff</command>
+      </action>
+    </item>
+  </menu>
 </openbox_menu>

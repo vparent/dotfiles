@@ -22,7 +22,7 @@ call plug#begin('$XDG_CONFIG_HOME/vim/plugged')
 	Plug 'Shougo/vimshell.vim'
 	Plug 'deoplete-plugins/deoplete-jedi'
 	Plug 'wellle/tmux-complete.vim'
-	Plug 'php-vim/phpcd.vim', {'for': 'php', 'do': 'composer install'}
+	"Plug 'php-vim/phpcd.vim', {'for': 'php', 'do': 'composer install'}
 	Plug 'lighttiger2505/deoplete-vim-lsp'
 	" 2}}} "
 
@@ -41,7 +41,7 @@ call plug#begin('$XDG_CONFIG_HOME/vim/plugged')
 
 	Plug 'pearofducks/ansible-vim'
 
-	Plug 'vlime/vlime', {'rtp': 'vim/'}
+	"Plug 'vlime/vlime', {'rtp': 'vim/'}
 call plug#end()
 " 1}}} "
 " Airline config {{{ "
@@ -114,6 +114,11 @@ let g:lsp_fold_enabled = 0
 let g:lsp_signature_help_enabled = 0
 let g:lsp_async_completion = 1
 " }}} LSP settings "
+" slimv settings {{{ "
+let g:slimv_swank_cmd = "!ros -e '(ql:quickload :swank) (swank:create-server)' wait &"
+let g:slimv_lisp = 'ros run'
+let g:slimv_impl = 'sbcl'
+" }}} "
 
 autocmd! BufNewFile,BufRead *vs,*gs,*fs set ft=glsl
 
