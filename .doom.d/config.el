@@ -94,4 +94,5 @@
 (after! org-mode
   global-set-key (kbd "C-x p i") 'org-cliplink)
 
+;(load "~/.roswell/helper.el")
 (setq inferior-lisp-program "sbcl")
