@@ -69,3 +69,5 @@ else
 	kill $(pgrep polybar)
 	kill $(pgrep autocutsel)
 fi
+
+systemctl stop --user emacs

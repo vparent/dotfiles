@@ -89,10 +89,9 @@
 (after! markdown-mode
   (setq markdown-command "pandoc -o /tmp/doc.pdf"))
 
-(add-hook! 'org-mode-hook 'org-superstar-mode)
-
 (after! org-mode
   global-set-key (kbd "C-x p i") 'org-cliplink)
 
-;(load "~/.roswell/helper.el")
-(setq inferior-lisp-program "sbcl")
+(load "~/.roswell/helper.el")
+(setq inferior-lisp-program "ros -Q run")
+;(setq inferior-lisp-program "sbcl")

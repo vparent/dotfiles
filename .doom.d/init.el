@@ -148,21 +148,21 @@
        ;;nix               ; I hereby declare "nix geht mehr!"
        ;;ocaml             ; an objective camel
        (org +org-download
-			+org-evil
-			+org-pdftools
-			+ox-pandoc
-			+org-noter
-			+org-pretty
-			+ob-ipython
-			+ob-rust
-			+evil-org
-			+dragndrop
-			+journal
-			+pandoc
-			+present
-			+pertty
-			+org-cliplink
-			+org-yt)               ; organize your plain life in plain text
+            +org-evil
+            +org-pdftools
+            +ox-pandoc
+            +org-noter
+            +org-pretty
+            +ob-ipython
+            +ob-rust
+            +evil-org
+            +dragndrop
+            +journal
+            +pandoc
+            +present
+            +pretty
+            +org-cliplink
+            +org-yt)               ; organize your plain life in plain text
        ;;php               ; perl's insecure younger brother
        ;;plantuml          ; diagrams for confusing people more
        ;;purescript        ; javascript, but functional
