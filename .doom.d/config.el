@@ -72,7 +72,7 @@
 
 (setq message-kill-buffer-on-exit t)
 
-(after! sh-script
+(after! 'sh-script
   (set-company-backend! 'sh-mode
     '(company-shell :with company-yasnippet company-files)))
 
@@ -82,16 +82,11 @@
 (after! 'c++-mode
   (set-eglot-client! 'c++-mode '("clangd" "-j=3" "--clang-tidy" "--completion-style=detailed")))
 
-
-(after! rustic
+(after! 'rustic
   (setq rustic-lsp-server 'rls))
 
-(after! markdown-mode
-  (setq markdown-command "pandoc -o /tmp/doc.pdf"))
-
-(after! org-mode
-  global-set-key (kbd "C-x p i") 'org-cliplink)
+(setq markdown-command "pandoc -o /tmp/doc.pdf")
 
 (load "~/.roswell/helper.el")
-(setq inferior-lisp-program "ros -Q run")
-;(setq inferior-lisp-program "sbcl")
+
+(setq langtool-default-language "fr")
