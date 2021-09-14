@@ -23,8 +23,8 @@
 ;;       doom-variable-pitch-font (font-spec :family "sans" :size 13))
 
 ;; Font setting
-(setq doom-font (font-spec :family "JetBrainsMono" :size 14)
-      doom-variable-pitch-font (font-spec :family "JetBrainsMono" :size 15)
+(setq doom-font (font-spec :family "JetBrainsMono" :size 16)
+      doom-variable-pitch-font (font-spec :family "JetBrainsMono" :size 16)
       doom-big-font (font-spec :family "JetBrainsMono" :size 24))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
@@ -90,3 +90,6 @@
 (load "~/.roswell/helper.el")
 
 (setq langtool-default-language "fr")
+
+(setq geiser-active-implementations '(guile chez gauche))
+(setq geiser-gauche-binary "/usr/bin/gosh")
